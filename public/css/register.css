@@ -1,0 +1,308 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, figure {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee;
+  font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 16px; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a, u {
+  text-decoration: none !important; }
+
+img {
+  border: 0;
+  display: block; }
+
+ul, ol, li {
+  list-style: none; }
+
+input {
+  outline: none; }
+
+.clear-fix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+/*top*/
+#top {
+  height: 32px;
+  background: #333; }
+  #top a {
+    color: #ccc;
+    padding: 0 10px; }
+  #top .top_box {
+    height: 32px;
+    width: 90%;
+    margin: 0 auto; }
+    #top .top_box .topL {
+      float: left; }
+      #top .top_box .topL .dropdown-menu {
+        width: 200px;
+        position: absolute;
+        top: 32px;
+        z-index: 10;
+        background: #fff;
+        display: none; }
+    #top .top_box .topR {
+      float: right; }
+      #top .top_box .topR .dropdown-menu {
+        width: 120px;
+        position: absolute;
+        top: 32px;
+        z-index: 10;
+        background: #fff;
+        display: none; }
+        #top .top_box .topR .dropdown-menu li {
+          width: 118px; }
+    #top .top_box li {
+      float: left;
+      padding: 6px 0 5px; }
+    #top .top_box .dropdown-menu li {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee; }
+  #top .dropdown-menu a {
+    color: #585b48; }
+  #top .top_line {
+    border-right: 1px solid #222; }
+
+/*logo*/
+#logo_box {
+  width: 100%;
+  background: #fff; }
+  #logo_box .btn1, #logo_box .btn2:hover {
+    cursor: pointer; }
+  #logo_box .logo {
+    height: 100px;
+    width: 90%;
+    background: #fff;
+    margin: 0 auto;
+    float: left; }
+    #logo_box .logo .logo_con {
+      float: left;
+      width: 20%;
+      margin: 20px 0 0 5%; }
+    #logo_box .logo .select {
+      float: right;
+      margin: 20px 5% 0 0;
+      width: 65%; }
+      #logo_box .logo .select a {
+        font-size: 12px;
+        padding: 0 5px; }
+      #logo_box .logo .select .btn2 {
+        float: right;
+        padding-top: 8px;
+        margin-right: 10px;
+        height: 24px;
+        width: 86px;
+        color: #fff;
+        background: #de3c5b;
+        border: 0;
+        border-radius: 16px; }
+        #logo_box .logo .select .btn2 #tuan_car_num {
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          background: #fff;
+          color: #de3c5b;
+          border-radius: 10px; }
+      #logo_box .logo .select .select_box {
+        float: right;
+        width: 70%; }
+        #logo_box .logo .select .select_box input {
+          width: 75%;
+          height: 30px;
+          border: 1px solid #d00; }
+        #logo_box .logo .select .select_box .btn1 {
+          height: 32px;
+          background: #de3c5b;
+          border: 0;
+          width: 80px;
+          color: #fff; }
+        #logo_box .logo .select .select_box p {
+          font-size: 14px;
+          color: #888; }
+          #logo_box .logo .select .select_box p a {
+            font-size: 12px;
+            color: #888; }
+
+/*nav*/
+#nav {
+  height: 40px;
+  background: #de3c5b; }
+  #nav .nav_con {
+    height: 40px;
+    line-height: 40px;
+    width: 90%;
+    margin: 0 auto; }
+    #nav .nav_con a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      color: #fff; }
+    #nav .nav_con li:hover {
+      background: #bf0024; }
+    #nav .nav_con .self {
+      background: #bf0024; }
+    #nav .nav_con .navL {
+      float: left;
+      width: 70%; }
+      #nav .nav_con .navL li {
+        float: left;
+        position: relative;
+        padding: 0 3% 0; }
+    #nav .nav_con .navR {
+      float: right;
+      width: 30%; }
+      #nav .nav_con .navR li {
+        float: right;
+        padding: 0 6% 0; }
+    #nav .nav_con .tuan_category_ul {
+      border: 1px solid #eee;
+      width: 120px;
+      position: absolute;
+      top: 40px;
+      z-index: 10;
+      background: #fff;
+      display: none; }
+    #nav .nav_con .list-group-item {
+      background: #de3c5b;
+      width: 120px;
+      text-align: center; }
+    #nav .nav_con .global {
+      border: 1px solid #eee;
+      width: 120px;
+      position: absolute;
+      top: 40px;
+      z-index: 10;
+      background: #fff;
+      display: none; }
+    #nav .nav_con .rebate_group {
+      border: 1px solid #eee;
+      width: 120px;
+      position: absolute;
+      top: 40px;
+      z-index: 10;
+      background: #fff;
+      display: none; }
+
+/*foot*/
+#foot {
+  background: #333;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff; }
+  #foot .foot_box {
+    height: 78px;
+    width: 90%;
+    margin: 0 auto; }
+    #foot .foot_box p {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #fff; }
+      #foot .foot_box p img {
+        display: inline-block;
+        height: 20px; }
+      #foot .foot_box p a {
+        color: #fff; }
+
+#register_box {
+  height: 810px; }
+  #register_box .register {
+    width: 430px;
+    margin: 50px auto;
+    padding: 15px;
+    background: #fff; }
+    #register_box .register .register-head {
+      height: 96px;
+      margin-bottom: 20px;
+      text-align: center; }
+      #register_box .register .register-head a {
+        text-align: center; }
+        #register_box .register .register-head a img {
+          width: 96px;
+          height: 96px;
+          display: inline-block;
+          border-radius: 50%; }
+    #register_box .register .form-group {
+      border-bottom: 1px solid #ccc; }
+      #register_box .register .form-group .input-group {
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px; }
+        #register_box .register .form-group .input-group .input-group-con {
+          width: 82px;
+          border-right: 1px solid #ccc;
+          border-radius: 10px 0 0 10px;
+          background: #eee;
+          text-align: center;
+          font-size: 14px;
+          line-height: 34px;
+          padding: 10px; }
+        #register_box .register .form-group .input-group .form-control {
+          border: 0;
+          height: 30px;
+          width: 320px; }
+        #register_box .register .form-group .input-group .yanzheng {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 200px; }
+      #register_box .register .form-group .btn_input {
+        border-color: #fff; }
+        #register_box .register .form-group .btn_input .btn-primary {
+          width: 100%;
+          border: 0;
+          border-radius: 5px;
+          height: 32px;
+          background: blue;
+          color: #fff;
+          cursor: pointer; }
+      #register_box .register .form-group .change {
+        text-align: center;
+        margin: 20px 0 20px; }
+        #register_box .register .form-group .change .btn-default {
+          color: #333;
+          padding: 8px 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px; }
+    #register_box .register .other_box {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #333; }
+      #register_box .register .other_box .box_con {
+        height: 120px;
+        width: 130px;
+        float: left; }
+        #register_box .register .other_box .box_con a {
+          color: #333;
+          padding-top: 40px;
+          display: inline-block;
+          width: 100%;
+          position: relative;
+          text-align: center; }
+      #register_box .register .other_box .xy_box .fa-circle {
+        color: #63b158 !important; }
+      #register_box .register .other_box .qq .fa-circle {
+        color: #039dee; }
+      #register_box .register .other_box .wb .fa-circle {
+        color: #e8a935; }
+
+p {
+  margin-bottom: 10px; }

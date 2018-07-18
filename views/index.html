@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+		<script src = "/js/jquery-1.11.3.js"></script>
+		
+		
+	</head>
+	<body>
+		<!--top-->
+		<div id = "top">
+			<div class = "top_box clear-fix">
+				<ul class = "topL">
+					<li><a href="index.html">海淘首页</a><span class="top_line"></span></li>
+					<li><a href="">关于我们</a></li>
+					<li class = "drop_con"><a href=""><span class= "fa fa-clock-o"></span>世界时间</a>
+						<ul class="dropdown-menu clear-fix  nav_dropdown_time">
+						<li id="localutc_time">本地时间：2018/6/28 上午9:05:45</li> 
+						<!--<li id="portland_time"></li> -->
+						<li id="losangeles_time">美国洛杉矶：2018年6月27日17:05:45</li> 
+						<li id="frankfurt_time">德国法兰克福：2018年6月28日 2:05:45</li>
+						<li id="tokyo_time">日本大阪：2018年6月28日10:05:45</li>
+						<li id="sydney_time">澳洲悉尼：2018年6月28日12:05:45</li>
+						<li id="london_time">英国伦敦：2018年6月28日 2:05:45</li> 
+					</ul>
+					</li>
+					
+				</ul>
+				
+				
+				<ul class = "topR">
+					<li class = "drop_con"><a href="">我的转运<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu" >
+							<li><a href="#" class=""><span class="fa fa-fw fa-bank"></span> 转运仓库</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-bullhorn"></span> 到货预报</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-cube"></span> 包裹管理</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-paper-plane"></span> 转运订单</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-podcast"></span> 包裹认领</a></li>
+						</ul>
+					</li>
+					<li><a href="">我的团购</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="">我的返利<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="#" class=""><span class="fa fa-fw fa-money"></span> 返利打赏</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-gift"></span> 转运红包</a></li>
+							<li><a href="#"><span class="fa fa-fw fa-book"></span> 返利攻略</a></li>
+							<li><a href="#" class=""><span class="fa fa-fw fa-users"></span> 我的邀请</a></li>
+						</ul>
+					</li>
+					<li class = "drop_con"><a href="">分享收藏<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="#"><span class="fa fa-fw fa-book"></span> 我的分享</a></li>
+							<li><a href="#"><span class="fa fa-fw fa-edit"></span> 写分享</a></li>
+							<li><a href="#" class="header_top_line"><span class="fa fa-fw fa-star"></span> 我的收藏</a></li>
+						</ul>
+					</li>
+					<li><a href="register.html">注册</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="login.html">登录<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="#"><span class="fa fa-user  fa-fw"></span> 会员登录</a></li>
+							<li> <a href="#" target="_blank"><span class="fa fa-weixin fa-fw"></span> 微信登录</a></li>
+							<li><a href="#"><span class="fa fa-weibo fa-fw"></span> 微博登录</a></li>
+							<li><a href="#" target="_blank"><span class="fa fa-qq fa-fw"></span> QQ登录</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</div>
+		</div>
+			
+		<!--logo-->
+		<div id = "logo_box" class = "clear-fix">
+			<div class = "logo clear-fix">
+				<div class = "logo_con"><a href=""><img src="images/logo.png" alt="" /></a></div>
+				<form action="" class= "select clear-fix">
+					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">1</span></div>
+					<div class = "select_box">
+						<input type="text" placeholder="搜索全球"/><button class="btn1"><span class="fa fa-search"></span></button>
+						<p>
+							热搜：<a href="">母亲节</a><span class = "a_boder"></span>
+							<a href="">夏日装备</a><span class = "a_boder"></span>
+							<a href="">costco</a><span class = "a_boder"></span>
+							<a href="">葡萄籽</a><span class = "a_boder"></span>
+							<a href="">面膜</a><span class = "a_boder"></span>
+						</p>
+					</div>		
+				</form>
+					
+			</div>
+		</div>
+		
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_con clear-fix">
+				<ul class = "navL">
+					<li  class ="self"><a href="#">首页</a></li>
+					<li class = "drop_con"><a href="listpage.html">海淘团购</a>
+						<ul class="tuan_category_ul dropdown-menu">
+							<li class="list-group-item">
+								<a href="listpage.html" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-leaf"></i>保健<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-female"></i>美妆<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-ravelry"></i>生活<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-shopping-bag"></i>箱包<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-paw"></i>鞋子<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-tachometer"></i> 美食<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-empire"></i> 潮流<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+						
+						</ul>
+					</li>
+					
+					<li class = "drop_con"><a href="">全球值得买</a>
+						<ul class="global dropdown-menu">
+							<li class="list-group-item">
+								<a href="#" target="_blank">美国</a>
+							</li>
+							<li class="list-group-item">
+								
+								<a href="#" target="_blank">中国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">澳洲</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">英国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">德国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">香港</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">日本</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">韩国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">法国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#"target="_blank">意大利</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">新西兰</a>
+							</li>
+												
+						</ul>						
+					</li>
+					<li class = "drop_con"><a href="">海淘返利</a>
+						<ul class="rebate_group dropdown-menu">
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-fire"></span> 优惠爆料</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-photo"></span> 购物笔记</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-desktop"></span> 海淘快评</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-grav"></span> 精选攻略</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-asterisk"></span> 最新发布</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href="" target="_blank"><span class="fa fa-fw fa-pencil"></span> 添加爆料</a>			
+							</li>
+						</ul>						
+					</li>
+					<li><a href="">全球转运</a></li>
+				</ul>
+				<ul class = "navR">
+					<li><a href=""><sapn class="fa fa-h-square"></sapn>海淘APP</a></li>
+					<li><a href=""><span class="fa fa-chrome"></span>海淘盒子</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--banner-->
+		<div id = "slider" class = "banner clear-fix">
+			
+			<ul>
+				<li class = "li1"><a href=""></a></li>
+				<li class = "li2"><a href=""></a></li>
+				<li class = "li3"><a href=""></a></li>
+				<li class = "li4"><a href=""></a></li>
+				<li class = "li5"><a href=""></a></li>
+				<li class = "li6"><a href=""></a></li>
+			</ul>			
+		</div>
+		
+		<!--全球精选-->
+		<div class = "GS clear-fix">
+			<span>全球海淘精选</span><br/>
+			<div class = "GS_con clear-fix">
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#l">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#l">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>
+				<dl class = "goods">
+					<dt><a href="#"><img src="images/GS/1.jpg" alt="" /></a></dt>
+					<dd class = "txt_box">
+						<a href="#">
+							<p>小蜜蜂手链低至488元包邮税 &nbsp;</p>
+							<p>美国施华洛世奇官网同步不止五折</p>
+						</a>	
+					</dd>
+				</dl>				
+			</div>
+		</div>
+		
+		<!--最新推荐-->
+		<div class = "news clear-fix">
+			<!--左侧:排行-->
+			<div class = "newsL clear-fix">
+				<h2 class = "newsL_header">
+					<span>最新推荐</span>
+					<a href="" class = "btn"><i class="fa fa-edit"></i>爆料/分享</a>
+				</h2>
+				<!--1-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				
+				<!--2-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--3-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--4-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="//www.haitao.com/faxian/store/4290.html"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--5-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--6-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--7-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+				<!--8-->
+				<div class = "newsL_box clear-fix">
+					<div class="newsL_img"><img src="images/newsL/1.jpg" alt="" /></div>
+					<div class = "newsL_con">
+						<h3 class = "clear-fix">
+							<a href="#"   target='_blank' >英国Lookfantastic中文网</a>
+						 	<b class="b1">券</b> <b class="b2">5%返利</b>			
+						</h3>
+			
+			
+						<h4><a href="#"   target='_blank' >
+						<span class="text-red">买三免一+额外95折+满380元包直邮</span> lookfantastic中文网：精选 Crabtree&Evelyn 个护专场</a></h4>
+			
+						<p class="details">人气护手霜、身体乳入手好价，双重折扣叠加，满380元包直邮 lookfantastic中文网 现有精选 Crabtree&Evelyn 个护专场促销活动，专场内单品买三免一，使用优惠码“EXTRA5”可享额外95折。包含热门的护手霜、洗手液等。</p>
+			
+						<h5>
+						最新值得买 9分钟前  
+							<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+							<div class="rebate">
+								<a href="" target="_blank" class="btn btn-fanli btn-sm"> 返利直达 &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</h5>
+					</div>
+				</div>
+					
+				</div>
+
+			<!--右侧:1.海淘入门,2.常用攻略-->
+			<div class = "newsR clear-fix">
+				<!--海淘入门-->
+				<div class = "intr clear-fix">
+					<h2>海淘入门<span>新人必看</span></h2>
+					<div class = "list_group">
+						<a href="" class="list_item">
+							<span class="list_num">1</span>
+							&nbsp;&nbsp;一分钟了解全球购物网站
+						</a>
+						<a href="" class="list_item">
+							<span class="list_num list_num_yellow">2</span>
+							&nbsp;&nbsp;如何使用海淘网转运
+						</a>
+						<a href="" class="list_item">
+							<span class="list_num list_num_green">3</span>
+							&nbsp;&nbsp;海淘网团购能不能买
+						</a>
+						<a href="" class="list_item">
+							<span class="list_num list_num_pink">4</span>
+							&nbsp;&nbsp;海淘交流微信群怎么加？
+						</a>
+						<a href="" class="list_item">
+								<span class="list_num list_num_blue">5</span>
+								&nbsp;&nbsp;必备工具：翻译、返利、转运、全球比价
+						</a>
+					</div>
+				</div>
+				<!--常用攻略-->
+				<div class = "used clear-fix">
+					<h2>常用攻略<a href="#" target="_blank" class="more">更多</a></h2>
+					<!--1-->
+					<div class = "used_box">
+						<h3 class = "clear-fix">
+							<a href="#" target="_blank">Harrods哈洛德百货</a><b>6%返利</b>
+							
+						</h3>
+						<h4>
+							<a href="#" target="_blank">
+<span class="text-red">英国版尼曼百货！ Harrods 哈罗德下单全攻略！</span> 英国 Harrods 哈罗德 百货商店 海淘攻略</a>
+						</h4>
+						<div class = "used_img clear-fix">
+							<a href="" class = "clear-fix">
+								<img src="images/used/1.jpg" alt="" />
+								<img src="images/used/2.jpg" alt="" />
+								<img src="images/used/3.jpg" alt="" />
+							</a>
+						</div>
+						<h5>
+							半卷旱烟 543天前  
+							<div>
+								<span class="fa fa-eye">1716</span>
+								<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="dig_num_1_24004"> 4</span></a>
+							</div>
+
+						</h5>
+					</div>
+					<!--2-->
+					<div class = "used_box">
+						<h3 class = "clear-fix">
+							<a href="#" target="_blank">Harrods哈洛德百货</a><b>6%返利</b>
+							
+						</h3>
+						<h4>
+							<a href="#" target="_blank">
+<span class="text-red">英国版尼曼百货！ Harrods 哈罗德下单全攻略！</span> 英国 Harrods 哈罗德 百货商店 海淘攻略</a>
+						</h4>
+						<div class = "used_img clear-fix">
+							<a href="" class = "clear-fix">
+								<img src="images/used/1.jpg" alt="" />
+								<img src="images/used/2.jpg" alt="" />
+								<img src="images/used/3.jpg" alt="" />
+							</a>
+						</div>
+						<h5>
+							半卷旱烟 543天前  
+							<div>
+								<span class="fa fa-eye">1716</span>
+								<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="dig_num_1_24004"> 4</span></a>
+							</div>
+
+						</h5>
+					</div>
+					
+					<!--3-->
+					<div class = "used_box">
+						<h3 class = "clear-fix">
+							<a href="#" target="_blank">Harrods哈洛德百货</a><b>6%返利</b>
+							
+						</h3>
+						<h4>
+							<a href="#" target="_blank">
+<span class="text-red">英国版尼曼百货！ Harrods 哈罗德下单全攻略！</span> 英国 Harrods 哈罗德 百货商店 海淘攻略</a>
+						</h4>
+						<div class = "used_img clear-fix">
+							<a href="" class = "clear-fix">
+								<img src="images/used/1.jpg" alt="" />
+								<img src="images/used/2.jpg" alt="" />
+								<img src="images/used/3.jpg" alt="" />
+							</a>
+						</div>
+						<h5>
+							半卷旱烟 543天前  
+							<div>
+								<span class="fa fa-eye">1716</span>
+								<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="dig_num_1_24004"> 4</span></a>
+							</div>
+
+						</h5>
+					</div>
+					<!--4-->
+	
+				</div>
+				
+				<!--最新发布-->
+				
+				<div class = "issue clear-fix">
+					<h2 class = "issue_header">
+						最新推荐
+						<a href="" class = "more">更多</a>
+					</h2>
+				<!--1-->
+					<div class = "issue_box clear-fix">
+						<div class="issue_img">
+							<img src="images/issue/1.jpg" alt="" />
+						</div>
+						<div class = "issue_con">
+							<h3 class = "clear-fix">
+								<a href="#"  target='_blank' >Shopspring</a>
+							 	 <b class="b2">7%返利</b>			
+							</h3>
+				
+				
+							<h4><a href="#"   target='_blank' >
+							<span class="text-red">$156.45约1110元</span>  MICHAEL KORS 迈克·科尔斯 Selma Medium 女士斜挎包</a></h4>
+							<h5>
+							最新值得买 4分钟前 
+								<div class = "FL">
+									<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+								</div>
+								
+							</h5>
+						</div>
+					</div>
+					<!--2-->
+					<div class = "issue_box clear-fix">
+						<div class="issue_img">
+							<img src="images/issue/1.jpg" alt="" />
+						</div>
+						<div class = "issue_con">
+							<h3 class = "clear-fix">
+								<a href="#l"  target='_blank' >Shopspring</a>
+							 	 <b class="b2">7%返利</b>			
+							</h3>
+				
+				
+							<h4><a href="#"   target='_blank' >
+							<span class="text-red">$156.45约1110元</span>  MICHAEL KORS 迈克·科尔斯 Selma Medium 女士斜挎包</a></h4>
+							<h5>
+							最新值得买 4分钟前 
+								<div class = "FL">
+									<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+								</div>
+								
+							</h5>
+						</div>
+					</div>
+					<!--3-->
+					<div class = "issue_box clear-fix">
+						<div class="issue_img">
+							<img src="images/issue/1.jpg" alt="" />
+						</div>
+						<div class = "issue_con">
+							<h3 class = "clear-fix">
+								<a href="#"  target='_blank' >Shopspring</a>
+							 	 <b class="b2">7%返利</b>			
+							</h3>
+				
+				
+							<h4><a href="#"   target='_blank' >
+							<span class="text-red">$156.45约1110元</span>  MICHAEL KORS 迈克·科尔斯 Selma Medium 女士斜挎包</a></h4>
+							<h5>
+							最新值得买 4分钟前 
+								<div class = "FL">
+									<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+								</div>
+								
+							</h5>
+						</div>
+					</div>
+					<!--4-->
+					<div class = "issue_box clear-fix">
+						<div class="issue_img">
+							<img src="images/issue/1.jpg" alt="" />
+						</div>
+						<div class = "issue_con">
+							<h3 class = "clear-fix">
+								<a href="#"  target='_blank' >Shopspring</a>
+							 	 <b class="b2">7%返利</b>			
+							</h3>
+				
+				
+							<h4><a href="#"   target='_blank' >
+							<span class="text-red">$156.45约1110元</span>  MICHAEL KORS 迈克·科尔斯 Selma Medium 女士斜挎包</a></h4>
+							<h5>
+							最新值得买 4分钟前 
+								<div class = "FL">
+									<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+								</div>
+								
+							</h5>
+						</div>
+					</div>
+					<!--5-->
+					<div class = "issue_box clear-fix">
+						<div class="issue_img">
+							<img src="images/issue/1.jpg" alt="" />
+						</div>
+						<div class = "issue_con">
+							<h3 class = "clear-fix">
+								<a href="#"  target='_blank' >Shopspring</a>
+							 	 <b class="b2">7%返利</b>			
+							</h3>
+				
+				
+							<h4><a href="#"   target='_blank' >
+							<span class="text-red">$156.45约1110元</span>  MICHAEL KORS 迈克·科尔斯 Selma Medium 女士斜挎包</a></h4>
+							<h5>
+							最新值得买 4分钟前 
+								<div class = "FL">
+									<span class="fa fa-eye">111</span> &nbsp;<a href="javascript:;" class="fa fa-thumbs-o-up"> <span id="support"> 1</span></a>
+								</div>
+								
+							</h5>
+						</div>
+					</div>
+					<!--6-->
+							
+				</div>
+				
+				
+			</div>
+		</div>	
+		
+		<!--foot-->
+		<div id = "foot">
+			<div class = "foot_box">
+				<p><a href="#">关于我们</a>&nbsp;&nbsp; <a href="#">网站守则</a> &nbsp;&nbsp; <a href="#">团购说明</a> &nbsp;&nbsp;  <a href="#">转运服务</a>&nbsp;&nbsp;  <a href="#">联系我们</a> </p>
+				<p>©2018 海淘网 <a href="#">沪ICP备14025008号</a> &nbsp;&nbsp; <a href="#"><img src="images/foot/1.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/foot/2.png"> 网安备31011502002285</p>
+			</div>
+		</div>
+		
+		<script src="/js/index.js"></script>
+		<script type="text/javascript">
+			
+			var slider = new Slider("slider");
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页面</title>
+		<link rel="stylesheet" href="/css/detailpage.css" />
+		<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+		<script src = "/js/jquery-1.11.3.js"></script>
+		
+		
+	</head>
+	<body>
+		
+		<!--top-->
+		<div id = "gid" style = "display: none;">1</div>
+		<div id = "top">
+			<div class = "top_box clear-fix">
+				<ul class = "topL">
+					<li><a href="index.html">海淘首页</a><span class="top_line"></span></li>
+					<li><a href="#">关于我们</a></li>
+					<li class = "drop_con show_time"><a href="#"><span class= "fa fa-clock-o"></span>世界时间</a>
+						<ul class="dropdown-menu clear-fix  nav_dropdown_time">
+						<li id="localutc_time">本地时间：2018/6/28 上午9:05:45</li> 
+						<!--<li id="portland_time"></li> -->
+						<li id="losangeles_time">美国洛杉矶：2018年6月27日17:05:45</li> 
+						<li id="frankfurt_time">德国法兰克福：2018年6月28日 2:05:45</li>
+						<li id="tokyo_time">日本大阪：2018年6月28日10:05:45</li>
+						<li id="sydney_time">澳洲悉尼：2018年6月28日12:05:45</li>
+						<li id="london_time">英国伦敦：2018年6月28日 2:05:45</li> 
+					</ul>
+					</li>					
+				</ul>
+				
+				
+				<ul class = "topR">
+					<li class = "drop_con"><a href="#">我的转运<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu" >
+							<li><a href="#" class=""><span class="fa fa-fw fa-bank"></span> 转运仓库</a></li>
+							<li><a href="//my.haitao.com/ship/yubao.php" class=""><span class="fa fa-fw fa-bullhorn"></span> 到货预报</a></li>
+							<li><a href="//my.haitao.com/ship/product.php" class=""><span class="fa fa-fw fa-cube"></span> 包裹管理</a></li>
+							<li><a href="//my.haitao.com/ship/order.php" class=""><span class="fa fa-fw fa-paper-plane"></span> 转运订单</a></li>
+							<li><a href="//my.haitao.com/ship/renling.php" class=""><span class="fa fa-fw fa-podcast"></span> 包裹认领</a></li>
+						</ul>
+					</li>
+					<li><a href="">我的团购</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="">我的返利<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/hongbao/" class=""><span class="fa fa-fw fa-money"></span> 返利打赏</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=2" class=""><span class="fa fa-fw fa-gift"></span> 转运红包</a></li>
+							<li><a href="//www.haitao.com/share/288703.html"><span class="fa fa-fw fa-book"></span> 返利攻略</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=3" class=""><span class="fa fa-fw fa-users"></span> 我的邀请</a></li>
+						</ul>
+					</li>
+					<li class = "drop_con"><a href="">分享收藏<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/share/"><span class="fa fa-fw fa-book"></span> 我的分享</a></li>
+							<li><a href="//www.haitao.com/share/edit.php"><span class="fa fa-fw fa-edit"></span> 写分享</a></li>
+							<li><a href="//www.haitao.com/collect/" class="header_top_line"><span class="fa fa-fw fa-star"></span> 我的收藏</a></li>
+						</ul>
+					</li>
+					<li><a href="register.html">注册</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="login.html">登录<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/login/?url="><span class="fa fa-user  fa-fw"></span> 会员登录</a></li>
+							<li> <a href="//my.haitao.com/login/sso/login.php?t=xss" target="_blank"><span class="fa fa-weixin fa-fw"></span> 微信登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=bss"><span class="fa fa-weibo fa-fw"></span> 微博登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=qss" target="_blank"><span class="fa fa-qq fa-fw"></span> QQ登录</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</div>
+		</div>
+			
+		<!--logo-->
+		<div id = "logo_box" class = "clear-fix">
+			<div class = "logo clear-fix">
+				<div class = "logo_con"><a href=""><img src="/images/logo.png" alt="" /></a></div>
+				<form action="" class= "select clear-fix">
+					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">1</span></div>
+					<div class = "select_box">
+						<input type="text" placeholder="搜索全球"/><button class="btn1"><span class="fa fa-search"></span></button>
+						<p>
+							热搜：<a href="">母亲节</a><span class = "a_boder"></span>
+							<a href="">夏日装备</a><span class = "a_boder"></span>
+							<a href="">costco</a><span class = "a_boder"></span>
+							<a href="">葡萄籽</a><span class = "a_boder"></span>
+							<a href="">面膜</a><span class = "a_boder"></span>
+						</p>
+					</div>		
+				</form>
+					
+			</div>
+		</div>
+		
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_con clear-fix">
+				<ul class = "nav_box clear-fix">
+					<li class = "drop_con tuan_index"><a href="listpage.html">团购首页</a>
+						<ul class="tuan_category_ul dropdown-menu">
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-leaf"></i>保健<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-female"></i>美妆<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-ravelry"></i>生活<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-shopping-bag"></i>箱包<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-paw"></i>鞋子<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-tachometer"></i> 美食<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-empire"></i> 潮流<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+						
+						</ul>
+					</li>
+					<li><a href="//www.haitao.com/tuan/daren/">达人专享</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=1">美国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=12">澳洲馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=5">德国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=14">荷兰馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=2">中国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=3">韩国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=9">香港馆</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="big_pic" style="position: absolute;top: 200px;left: 45%;width: 450px;height:450px;overflow: hidden;border: 2px solid #CCC;display: none;">
+			<img src="<%=data[0].pic1%>" class="big_img img1" style="position: absolute;top: -30px;left: -80px;"/>
+		</div>
+		<!--goodsdetail-->
+		<div class = "shop_goods clear-fix">
+			<!--上部详情-->
+			<div class = "goods_sold clear-fix">
+				<div class = "goods_sold_con clear-fix">
+					<!--左-->
+					<div class="goods_sold_left clear-fix">
+						<p class="text-center big_box" style = "background:#d00;position:relative">
+							<img src="<%=data[0].pic1%>"  style="display: inline;" class = "img1">
+							<img src="<%=data[0].pic1%>"   class = "img1 mark" style="display:inline;position:absolute;left:0;top:0;z-index:10;opacity: 0;">
+							<span class = "float" style="position: absolute;left: 0;top:0;z-index:1;width:100px;height:100px;background:#ccc;display:none;opacity:0.5;"></span>
+						</p>
+						
+						<div class="clear-fix  text-center foot10">
+							<a data-toggle="modal" data-target="#modal" href="#" class="btn btn-sm btn-default"><span class="fa fa-plus-circle text-muted"> 收入文章</span></a>&nbsp;&nbsp;
+							<a href="javascript:void(0)" onclick="collect(5,5640,1);return false;" class="btn btn-sm btn-default"><span class="fa fa-star text-muted " id="collect_fa_5_5640"> 收藏 204</span></a>&nbsp;&nbsp;
+							<a href="javascript:void(0)" onclick="dig(4,'5640');return false;" class="btn btn-sm btn-default"><span class="fa fa-thumbs-o-up"> <span id="dig_num_4_5640"> 220</span></span></a>
+							<a data-toggle="modal" data-target="#modal" href="/modal/?action=1&amp;type=0&amp;sku_id=5640&amp;them_type=1" class="btn btn-sm btn-default"><span class="fa fa-edit fa-lg"></span> 写分享 </a>
+						</div>
+						
+					</div>
+					
+					<!--右-->
+					<div class="goods_sold_right clear-fix" data-good-id = "<%=data[0].gid%>">
+						<div class="goods_right_box clear-fix">
+							<!--intro-->
+							<p class=" text-muted">品牌：<a href="/brand/390/" target="_blank" class="text-warning gname"><%=data[0].gname%><!--贝拉米--></a> </p>
+							<h1 class = "desc"><p class="text-red">2段奶粉 6罐整箱 包邮包税 </p>澳洲 BELLAMY S 贝拉米有机奶粉2段 6个月以上 900g*6罐 整箱</h1>
+							<div class="top20 price_show">
+								团购价格：
+								<span class="flash_price price1"><%=data[0].price%><!--￥1250元--></span>   
+								<span class="efp">包邮</span>    
+								<p class="top10">达人价格：<span class="flash_price price2">￥1199元</span>&nbsp;&nbsp;再省51元  &nbsp;&nbsp;<a data-toggle="modal" data-target="#modal" href="/daren/intro.php?them_type=1" class="daren-price"><i class="fa fa-question-circle text-gold"></i> <span class="text-white">海淘达人</span></a></p>
+							</div>
+							<p class="remark"><%=data[0].remark%><!--BELLAMY S有机农场位于澳大利亚的一个美丽的小岛——塔斯马尼亚岛上，占地30000亩。整个农场由澳大利亚有机认证机构NASAA监控，所有奶牛均不可人工喂养饲料，整个农场的牧草均不可用杀虫剂，也不可以用化肥，奶牛也不可以使用任何药物包括抗生素，而制造奶粉的机械有特殊要求，由于NASAA有机认证的要求如此之高，包括澳大利亚及新西兰只有BELLAMY S奶粉拿到有机奶粉证书。--></p>
+							<p class="text-muted">发货商家：海淘网澳洲</p>
+							<p class="text-muted">发货地点：澳洲 </p>
+							<p class="text-muted">发货时间：一般第二个工作日配货</p>
+							
+							<div class="product_group_more clear-fix">
+								
+								<a href="javascript:void(0)" class=" " id = "a1"><img src="/images/detailpage/7.jpg"><%=data[0].tab1%><!--&nbsp;1段 900g--></a>
+									
+									
+								<a href="javascript:void(0)" class=" " id = "a2"><img src="/images/detailpage/8.jpg"><%=data[0].tab2%><!--&nbsp;1段 900g*6--></a>
+									
+									
+								<a href="javascript:void(0)" class=" " id = "a3"><img src="/images/detailpage/7.jpg"><%=data[0].tab3%><!--&nbsp;2段 900g--></a>
+									
+									
+								<a href="javascript:void(0)" class="on" id = "a4"><img src="/images/detailpage/8.jpg"><%=data[0].tab4%><!--&nbsp;2段 900g*6--></a>
+									
+									
+								<a href="javascript:void(0)" class=" " id = "a5"><img src="/images/detailpage/7.jpg"><%=data[0].tab5%><!--&nbsp;3段 900g--></a>
+									
+									
+								<a href="javascript:void(0)" class=" " id = "a6"><img src="/images/detailpage/8.jpg"><%=data[0].tab6%><!--&nbsp;贝拉米3段*6罐--></a></br>
+								
+								
+							</div>
+							<p class="count clear-fix">
+								<span class = "num"></span>
+								<i class="numup">+</i>
+								<i class ="numdown">-</i>
+							</p>
+							<p class="add_cart">
+								
+								<a href="javascript:void(0)" title="" class="btn btn-danger btn-lg btn-car"><span class="fa fa-shopping-cart"> 放入购物车 </span></a>
+							 &nbsp;&nbsp;<span class="text-muted fa fa-plane"> 包邮商品 无需运费</span> </p>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+			
+			
+			<!--下部介绍，与广告-->
+			<div class = "goods_detail clear-fix">
+				<!--左侧介绍-->
+				<div class="goods_detail_left clear-fix">
+					<div class="detail_heading">商品详情</div>
+					<div class="detail_body">
+						<p class="text-center detail_one"><a href="http://www.haitao.com/about/14/" target="_blank"><img src="<%=data[0].pic2%>" class="img2"></a></p>
+						<img src="<%=data[0].pic3%>" class="img3"  style="display: inline;">
+						<img src="<%=data[0].pic4%>" class="img4" style="display: inline;">
+						<img src="<%=data[0].pic5%>" class="img5" style="display: inline;">
+						<img src="<%=data[0].pic6%>" class="img6" style="display: inline;">
+					</div>
+				</div>
+				<!--右侧广告-->
+				<div class ="goods_detail_right">
+					<div class="share_list">
+						<!--1-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						
+						<!--2-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--3-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--4-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--5-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--6-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--7-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--8-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--9-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--10-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--11-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--12-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--13-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--14-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--15-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--16-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--17-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--18-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--19-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--20-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--21-->
+						<div class="item">
+							<h2>
+								<a href="//www.haitao.com/share/88592.html" target="_blank"><span class="text-red">每一个都是爆款！</span> 澳洲明星单品TOP榜单，低至3折起超值团购！</a>
+							</h2>
+							<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+							<div class="pic top6">
+								<a href="//www.haitao.com/share/88592.html" target="_blank"></a>
+								<a href="//www.haitao.com/share/88592.html" target="_blank">
+									<img src="/images/detailpage/share1.jpg" class="media-object">
+								</a>
+							</div>
+							<h3>团购精选
+							
+								<a href="//www.haitao.com/faxian/store/4280.html" target="_blank">海淘网</a>
+							
+								<div class="pull_right">
+									<span class="fa fa-eye"> 15458</span> &nbsp;<a href="javascript:void(0)" onclick="dig(1,'88592');return false;" class="fa fa-thumbs-o-up text-gray"> <span id="dig_num_1_88592"> 19</span></a>
+								 </div>
+							</h3>
+						</div>
+						<!--22-->
+					
+					</div>
+					
+					
+					
+					<!--<div class="about_tuan">
+						
+					</div>-->
+					
+				</div>
+				
+				
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--foot-->
+		<div id = "foot">
+			<div class = "foot_box">
+				<p><a href="#">关于我们</a>&nbsp;&nbsp; <a href="#">网站守则</a> &nbsp;&nbsp; <a href="#">团购说明</a> &nbsp;&nbsp;  <a href="#">转运服务</a>&nbsp;&nbsp;  <a href="#">联系我们</a> </p>
+				<p>©2018 海淘网 <a href="#">沪ICP备14025008号</a> &nbsp;&nbsp; <a href="#"><img src="/images/foot/1.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/foot/2.png"> 网安备31011502002285</p>
+			</div>
+		</div>
+		
+		<!--左侧nav-->
+		<div class="nav_left clear-fix">
+			<div class="nav_default">
+				<div class="nav_body text-center">
+					<a href="/tuan/store/1984"><img src="http://img8.haitao.com/tuan/store/logo/0/1/1984/1984_0.jpg!80" onerror="no_img(80)" class="img-circle"></a>
+					<p>海淘网澳洲</p>
+					<!--<p><small class="text-muted">满400元包邮</small></p>
+					<p><small class="text-muted"></small></p>-->
+					<p><a href="javascript:void(0)" id="collect_btn_6_1984" onclick="collect(6,1984,1);return false;" class="btn btn-default btn-xs "><span class="fa fa-heart-o"> 关注</span> <span id="collect_num_6_1984">146</span></a>  </p>
+				</div>
+				<div class="list-group">
+					<a href="/tuan/store/view.php?id=1984&amp;type=3" class="list-group-item  ">配送方式</a>
+					
+					<a href="/tuan/store/view.php?id=1984" class="list-group-item ">所有商品</a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=465" class="list-group-item  ">鞋子<span class="pull-right">597</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=360" class="list-group-item  ">生活<span class="pull-right">146</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=431" class="list-group-item  ">保健<span class="pull-right">101</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=409" class="list-group-item  active">育儿<span class="pull-right">91</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=378" class="list-group-item  ">服装<span class="pull-right">80</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=384" class="list-group-item  ">美妆<span class="pull-right">71</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=428" class="list-group-item  ">食品<span class="pull-right">20</span></a>
+					<a href="/tuan/store/view.php?id=1984&amp;cid=333" class="list-group-item  ">数码<span class="pull-right">1</span></a>
+				
+				</div>
+			</div>
+
+		</div>
+		
+		<script type="text/javascript" src="/js/jquery.fly.js"></script>
+    	<script type="text/javascript" src="/js/detailpage.js" ></script>
+    	<script type="text/javascript" src="/js/head.js" ></script>
+    	
+		
+		
+	</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="/css/register.css" />
+		<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+		<script src = "/js/jquery-1.11.3.js"></script>
+	</head>
+	<body>
+		<!--top-->
+		<div id = "top">
+			<div class = "top_box clear-fix">
+				<ul class = "topL">
+					<li><a href="index.html">海淘首页</a><span class="top_line"></span></li>
+					<li><a href="#">关于我们</a></li>
+					<li class = "drop_con"><a href=""><span class= "fa fa-clock-o"></span>世界时间</a>
+						<ul class="dropdown-menu clear-fix  nav_dropdown_time">
+						<li id="localutc_time">本地时间：2018/6/28 上午9:05:45</li> 
+						<!--<li id="portland_time"></li> -->
+						<li id="losangeles_time">美国洛杉矶：2018年6月27日17:05:45</li> 
+						<li id="frankfurt_time">德国法兰克福：2018年6月28日 2:05:45</li>
+						<li id="tokyo_time">日本大阪：2018年6月28日10:05:45</li>
+						<li id="sydney_time">澳洲悉尼：2018年6月28日12:05:45</li>
+						<li id="london_time">英国伦敦：2018年6月28日 2:05:45</li> 
+					</ul>
+					</li>
+					
+				</ul>
+				
+				
+				<ul class = "topR">
+					<li class = "drop_con"><a href="">我的转运<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu" >
+							<li><a href="//my.haitao.com/ship/" class=""><span class="fa fa-fw fa-bank"></span> 转运仓库</a></li>
+							<li><a href="//my.haitao.com/ship/yubao.php" class=""><span class="fa fa-fw fa-bullhorn"></span> 到货预报</a></li>
+							<li><a href="//my.haitao.com/ship/product.php" class=""><span class="fa fa-fw fa-cube"></span> 包裹管理</a></li>
+							<li><a href="//my.haitao.com/ship/order.php" class=""><span class="fa fa-fw fa-paper-plane"></span> 转运订单</a></li>
+							<li><a href="//my.haitao.com/ship/renling.php" class=""><span class="fa fa-fw fa-podcast"></span> 包裹认领</a></li>
+						</ul>
+					</li>
+					<li><a href="">我的团购</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="">我的返利<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/hongbao/" class=""><span class="fa fa-fw fa-money"></span> 返利打赏</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=2" class=""><span class="fa fa-fw fa-gift"></span> 转运红包</a></li>
+							<li><a href="//www.haitao.com/share/288703.html"><span class="fa fa-fw fa-book"></span> 返利攻略</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=3" class=""><span class="fa fa-fw fa-users"></span> 我的邀请</a></li>
+						</ul>
+					</li>
+					<li class = "drop_con"><a href="">分享收藏<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/share/"><span class="fa fa-fw fa-book"></span> 我的分享</a></li>
+							<li><a href="//www.haitao.com/share/edit.php"><span class="fa fa-fw fa-edit"></span> 写分享</a></li>
+							<li><a href="//www.haitao.com/collect/" class="header_top_line"><span class="fa fa-fw fa-star"></span> 我的收藏</a></li>
+						</ul>
+					</li>
+					<li><a href="register.html">注册</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="login.html">登录<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/login/?url="><span class="fa fa-user  fa-fw"></span> 会员登录</a></li>
+							<li> <a href="//my.haitao.com/login/sso/login.php?t=xss" target="_blank"><span class="fa fa-weixin fa-fw"></span> 微信登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=bss"><span class="fa fa-weibo fa-fw"></span> 微博登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=qss" target="_blank"><span class="fa fa-qq fa-fw"></span> QQ登录</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</div>
+		</div>
+			
+		<!--logo-->
+		<div id = "logo_box" class = "clear-fix">
+			<div class = "logo clear-fix">
+				<div class = "logo_con"><a href=""><img src="/images/logo.png" alt="" /></a></div>
+				<form action="" class= "select clear-fix">
+					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">1</span></div>
+					<div class = "select_box">
+						<input type="text" placeholder="搜索全球"/><button class="btn1"><span class="fa fa-search"></span></button>
+						<p>
+							热搜：<a href="">母亲节</a><span class = "a_boder"></span>
+							<a href="">夏日装备</a><span class = "a_boder"></span>
+							<a href="">costco</a><span class = "a_boder"></span>
+							<a href="">葡萄籽</a><span class = "a_boder"></span>
+							<a href="">面膜</a><span class = "a_boder"></span>
+						</p>
+					</div>		
+				</form>
+					
+			</div>
+		</div>
+		
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_con clear-fix">
+				<ul class = "navL">
+					<li><a href="index.html">首页</a></li>
+					<li class = "drop_con"><a href="listpage.html">海淘团购</a>
+						<ul class="tuan_category_ul dropdown-menu">
+							<li class="list-group-item">
+								<a href="listpage.html" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-leaf"></i>保健<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-female"></i>美妆<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-ravelry"></i>生活<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-shopping-bag"></i>箱包<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-paw"></i>鞋子<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-tachometer"></i> 美食<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-empire"></i> 潮流<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+						
+						</ul>
+					</li>
+					
+					<li class = "drop_con"><a href="">全球值得买</a>
+						<ul class="global dropdown-menu">
+							<li class="list-group-item">
+								<a href="#" target="_blank">美国</a>
+							</li>
+							<li class="list-group-item">
+								
+								<a href="#" target="_blank">中国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">澳洲</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">英国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">德国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">香港</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">日本</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">韩国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">法国</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#"target="_blank">意大利</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank">新西兰</a>
+							</li>
+												
+						</ul>						
+					</li>
+					<li class = "drop_con"><a href="">海淘返利</a>
+						<ul class="rebate_group dropdown-menu">
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-fire"></span> 优惠爆料</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-photo"></span> 购物笔记</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-desktop"></span> 海淘快评</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-grav"></span> 精选攻略</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href=""><span class="fa fa-fw fa-asterisk"></span> 最新发布</a>
+						
+							</li>
+							<li class="list-group-item">
+								<a target="_blank" href="" target="_blank"><span class="fa fa-fw fa-pencil"></span> 添加爆料</a>			
+							</li>
+						</ul>						
+					</li>
+					<li><a href="">全球转运</a></li>
+				</ul>
+				<ul class = "navR">
+					<li><a href=""><sapn class="fa fa-h-square"></sapn>海淘APP</a></li>
+					<li><a href=""><span class="fa fa-chrome"></span>海淘盒子</a></li>
+				</ul>
+			</div>
+		</div>	
+		
+		<!--注册界面-->
+		<div id = "register_box">
+			
+			<div class = "register clear-fix">
+				
+				<p class="register-head">
+					<a href="index.html">
+						<img src="/images/register/1.jpg" alt="" />
+					</a>
+				</p>
+				
+				<form action="/users/reg" method="post" class="form-group">
+					<div class = "input-group"><label for="" class = "input-group-con">会员名称</label><input type="text" class="form-control" name="uname" id="uname" placeholder="会员名"></div>
+					
+					<div class = "input-group"><label for="" class = "input-group-con">登录密码</label><input class="form-control" type="password" id="upwd" name="upwd" placeholder="密 码"></div>
+					
+					<div class = "input-group"><label for="" class = "input-group-con">确认密码</label><input class="form-control" type="password" id="password_check" name="password2" placeholder="密 码"></div>
+					<div class = "input-group btn_input"><input class="form-control yanzheng" name="yzm" type="text" id="yzm" placeholder="验证码"><a href="javascript:void(0)" class = "change_code">刷新验证码</a></div>
+					<div class = "input-group btn_input">
+						<input type="submit" class="btn btn-primary btn-block" value="提交注册"/>
+					</div>
+					<div class="change"><a href="?type=0" class="btn btn-default text-muted">登录</a>   <a href="/login/rst.php" class="btn btn-default text-muted">忘记密码</a></div>
+					<div style = "font-size: 14px;margin-bottom:30px;"> 注册即代表同意并愿意遵守《<a href="http://www.haitao.com/about/19/" target="_blank">海淘网用户守则</a>》</div>
+				</form>
+	
+				<div class = "other_box">
+					<div class="xy_box box_con">
+						<a href="//my.haitao.com/login/sso/login.php?t=xss&amp;fu=http%3A%2F%2Fwww.haitao.com%2Ftuan%2F5640.html">
+							<span class="fa-stack fa-lg text-green">
+				                <i class="fa fa-circle fa-stack-2x"></i>
+				                <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+				               
+				            </span><br>
+				          	<small class="text-muted">微信登录</small>
+						</a>		
+					</div>
+					<div class = "qq box_con">
+				 		<a href="//my.haitao.com/login/sso/login.php?t=qss&amp;fu=http%3A%2F%2Fwww.haitao.com%2Ftuan%2F5640.html">
+				 			<span class="fa-stack fa-lg text-blue">
+				                <i class="fa fa-circle fa-stack-2x"></i>
+				                <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
+				            </span><br>
+				            <small class="text-muted">QQ登录</small>
+				 		</a>		
+						
+					</div>
+					<div class="wb box_con">
+						<a href="//my.haitao.com/login/sso/login.php?t=bss&amp;fu=http%3A%2F%2Fwww.haitao.com%2Ftuan%2F5640.html">
+							<span class="fa-stack fa-lg text-gold">
+				                <i class="fa fa-circle fa-stack-2x"></i>
+				                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+				            </span><br>
+				            <small class="text-muted">微博登录</small>
+						</a>		
+				
+					</div>
+					
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--foot-->
+		<div id = "foot">
+			<div class = "foot_box">
+				<p><a href="#">关于我们</a>&nbsp;&nbsp; <a href="#">网站守则</a> &nbsp;&nbsp; <a href="#">团购说明</a> &nbsp;&nbsp;  <a href="#">转运服务</a>&nbsp;&nbsp;  <a href="#">联系我们</a> </p>
+				<p>©2018 海淘网 <a href="#">沪ICP备14025008号</a> &nbsp;&nbsp; <a href="#"><img src="/images/foot/1.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/foot/2.png"> 网安备31011502002285</p>
+			</div>
+		</div>
+		<!--提示框-->
+		<div class="tishi clear-fix" style="width:150px;height:50px;position:fixed;left:0;top:0;bottom:0;right:0;margin:auto;background:#000;color:#fff;display:none;">
+					
+		</div>
+		
+		<script src="../../js/register.js"></script>
+
+	</body>
+</html>

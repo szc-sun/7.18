@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>购物车</title>
+		<link rel="stylesheet" href="/css/cart.css" />
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+		<script src = "/js/jquery-1.11.3.js"></script>
+	</head>
+	<body>
+		<!--top-->
+		<div id = "top">
+			<div class = "top_box clear-fix">
+				<ul class = "topL">
+					<li><a href="index.html">海淘首页</a><span class="top_line"></span></li>
+					<li><a href="">关于我们</a></li>
+					<li class = "drop_con show_time"><a href=""><span class= "fa fa-clock-o"></span>世界时间</a>
+						<ul class="dropdown-menu clear-fix  nav_dropdown_time">
+						<li id="localutc_time">本地时间：2018/6/28 上午9:05:45</li> 
+						<!--<li id="portland_time"></li> -->
+						<li id="losangeles_time">美国洛杉矶：2018年6月27日17:05:45</li> 
+						<li id="frankfurt_time">德国法兰克福：2018年6月28日 2:05:45</li>
+						<li id="tokyo_time">日本大阪：2018年6月28日10:05:45</li>
+						<li id="sydney_time">澳洲悉尼：2018年6月28日12:05:45</li>
+						<li id="london_time">英国伦敦：2018年6月28日 2:05:45</li> 
+					</ul>
+					</li>					
+				</ul>
+				
+				
+				<ul class = "topR">
+					<li class = "drop_con"><a href="">我的转运<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu" >
+							<li><a href="//my.haitao.com/ship/" class=""><span class="fa fa-fw fa-bank"></span> 转运仓库</a></li>
+							<li><a href="//my.haitao.com/ship/yubao.php" class=""><span class="fa fa-fw fa-bullhorn"></span> 到货预报</a></li>
+							<li><a href="//my.haitao.com/ship/product.php" class=""><span class="fa fa-fw fa-cube"></span> 包裹管理</a></li>
+							<li><a href="//my.haitao.com/ship/order.php" class=""><span class="fa fa-fw fa-paper-plane"></span> 转运订单</a></li>
+							<li><a href="//my.haitao.com/ship/renling.php" class=""><span class="fa fa-fw fa-podcast"></span> 包裹认领</a></li>
+						</ul>
+					</li>
+					<li><a href="">我的团购</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="">我的返利<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/hongbao/" class=""><span class="fa fa-fw fa-money"></span> 返利打赏</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=2" class=""><span class="fa fa-fw fa-gift"></span> 转运红包</a></li>
+							<li><a href="//www.haitao.com/share/288703.html"><span class="fa fa-fw fa-book"></span> 返利攻略</a></li>
+							<li><a href="//my.haitao.com/hongbao/?type=3" class=""><span class="fa fa-fw fa-users"></span> 我的邀请</a></li>
+						</ul>
+					</li>
+					<li class = "drop_con"><a href="">分享收藏<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/share/"><span class="fa fa-fw fa-book"></span> 我的分享</a></li>
+							<li><a href="//www.haitao.com/share/edit.php"><span class="fa fa-fw fa-edit"></span> 写分享</a></li>
+							<li><a href="//www.haitao.com/collect/" class="header_top_line"><span class="fa fa-fw fa-star"></span> 我的收藏</a></li>
+						</ul>
+					</li>
+					<li><a href="register.html">注册</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="login.html">登录<span class = "fa fa-sort-desc"></span></a>
+						<ul class="dropdown-menu nav_dropdown_menu">
+							<li><a href="//my.haitao.com/login/?url="><span class="fa fa-user  fa-fw"></span> 会员登录</a></li>
+							<li> <a href="//my.haitao.com/login/sso/login.php?t=xss" target="_blank"><span class="fa fa-weixin fa-fw"></span> 微信登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=bss"><span class="fa fa-weibo fa-fw"></span> 微博登录</a></li>
+							<li><a href="//my.haitao.com/login/sso/login.php?t=qss" target="_blank"><span class="fa fa-qq fa-fw"></span> QQ登录</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</div>
+		</div>
+			
+		<!--logo-->
+		<div id = "logo_box" class="clear-fix">
+			<div class = "logo clear-fix">
+				<div class = "logo_con"><a href=""><img src="/images/logo.png" alt="" /></a></div>
+				<form action="" class= "select clear-fix">
+					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">1</span></div>
+					<div class = "select_box">
+						<input type="text" placeholder="搜索全球"/><button class="btn1"><span class="fa fa-search"></span></button>
+						<p>
+							热搜：<a href="">母亲节</a><span class = "a_boder"></span>
+							<a href="">夏日装备</a><span class = "a_boder"></span>
+							<a href="">costco</a><span class = "a_boder"></span>
+							<a href="">葡萄籽</a><span class = "a_boder"></span>
+							<a href="">面膜</a><span class = "a_boder"></span>
+						</p>
+					</div>		
+				</form>
+					
+			</div>
+		</div>
+		
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_con clear-fix">
+				<ul class = "nav_box clear-fix">
+					<li class = "drop_con tuan_index"><a href="listpage.html">团购首页</a>
+						<ul class="tuan_category_ul dropdown-menu">
+							<li class="list-group-item">
+								<a href="listpage.html" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-leaf"></i>保健<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-female"></i>美妆<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-ravelry"></i>生活<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-shopping-bag"></i>箱包<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-paw"></i>鞋子<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-tachometer"></i> 美食<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+							<li class="list-group-item">
+								<a href="#" target="_blank"><i class="fa fa-fw fa-empire"></i> 潮流<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+							</li>
+						
+						</ul>
+					</li>
+					<li><a href="//www.haitao.com/tuan/daren/">达人专享</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=1">美国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=12">澳洲馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=5">德国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=14">荷兰馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=2">中国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=3">韩国馆</a></li>
+					<li><a href="//www.haitao.com/tuan/area/?id=9">香港馆</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--购物车-->
+		<div class = "cart clear-fix">
+			<!--空购物车-->
+			<div class = "cart_none">
+				<p>
+					<span class="fa fa-bug fa-4x"></span>
+				</p>
+			<p>购物车为空</p>
+			</div>
+			
+			<!--有商品时-->
+			
+			<div class="cart_show" style="display:none">
+				<style type="text/css">
+				    body{background:#e9617b;}
+				    .num-btn a{padding:1px 10px;border:1px solid #ddd;color:#666;display:inline-table;}
+				    .num-btn input{width:40px;text-align:center;border:none;border-top:1px solid #ddd;border-bottom:1px solid #ddd;height:24px;line-height:24px;}
+				    .title{height:40px;overflow:hidden;line-height:20px;}
+				</style>
+				<div class="user_remind">
+				                        您好，飞刀问情。您还不是海淘达人，升级达人可省
+				    <b class="flash_price">106元</b> &nbsp;&nbsp; 
+				    <a data-toggle="modal" data-target="#modal" href="/modal/?action=3&amp;them_type=1" class="daren-price">
+				    	<i class="fa fa-question-circle text-gold"></i> 
+				    	<span class="text-white">海淘达人</span>
+				    </a>
+
+				    <a class="pull-right text-muted" href="">
+				    	配送至中国 <span class="fa fa-angle-right"></span></a>
+				</div>
+				
+				<div class = "cart_box clear-fix">
+					<!--头部-->
+					<div class="cart-heading">
+						<span class="select_lable">
+			                <input type="checkbox" name="check_all_store" id="1984"><label for="1984"></label> 
+						</span>
+			          	 海淘网澳洲     
+			          	<a href="//www.haitao.com/tuan/store/1984/" target="_blank" class="pull-right text-gray">
+			          		进入店铺 <span class="fa fa-angle-right"></span>
+			          	</a>
+			        </div>
+			        <!--购物车内容-->
+			        <div class="cart_con clear-fix">
+			        	
+			        	<!--<div class="cart-group-item" id="">
+	                        <div class="row">
+	                            <div class="col-xs-1 col">
+	                            	<span class="select_lable">
+	                            		<input type="checkbox" name="1984" id="check_product_9682">
+	                            		<label for="check_product_9682"></label>
+	                            	</span></div>
+	                            <div class="col-xs-2 col">
+	                                <a href="//www.haitao.com/tuan/9682.html" target="_blank">
+	                                    <img src="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" data-original="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" onerror="nofind();" style="display: inline;">
+	                                </a>
+	                            </div>
+	                            <div class="col-xs-3  text-left col">
+	                                <p class="title">
+	                                	<a href="//www.haitao.com/tuan/9682.html" target="_blank">羊奶粉3段 6罐整箱 包邮包税 澳洲直邮 karicare可瑞康婴儿羊奶粉3段 900g*6罐  适合1岁以上婴儿</a> 
+	                                </p>
+	                                <p>
+	                                    <span class="text-border text-border-red">包邮</span>                                                                									<span class="text-border text-border-gold">限5件</span> 
+	                                </p>
+	                            </div>
+	                            <div class="col-xs-3 text-muted col">
+	                            	<b class="text-red ">1577元</b>
+	                                <p><span class="daren-price">
+	                                	<i class="fa fa-vimeo text-gold"></i> 省55元</span>
+	                                </p>                            
+	                            </div>
+	                            <div class="col-xs-2 num-btn text-center col">
+	                                <a href="javascript:void(0);" name="1984" id="decrement_9682"> - </a>
+	                                <input name="1984" id="num_9682" type="text" value="1">
+	                                <a href="javascript:void(0);" name="1984" id="increment_9682"> + </a>
+	                            </div>
+	
+	                            <div class="col-xs-1 text-right col">
+	                            	<a href="javascript:void(0);" name="1984" onclick = "Del()" id="del_9682">
+	                            		<span class="fa fa-trash text-gray"></span>
+	                            	</a>
+	                            </div>
+	                        </div>
+	                    </div>-->
+			        	
+
+			        </div>
+			        
+			        
+			        <!--付款-->
+			        
+			        <div class="order">
+                        <div class="form-inline clear-fix foot10">
+			                <div class="form-group">
+			                    <label for="shipping_chennel" style="font-weight:400">配送方式：</label>
+			                    <select class="form-control" id="shipping_chennel_1984" name="shipping_chennel">
+			                        <option value="275">澳洲-中国专线</option>
+			                    </select>
+			                </div>
+			            </div>
+                    	<p class="well well-sm"><span id="freight_1984">包邮活动！订单满400元，订单重量小于2kg该订单包邮（重量为0的商品不参与此优惠）！超过2kg订单，无法提供包邮，运费按照首重40元/kg，续重20元/0.5kg计算。</span> <a href="//www.haitao.com/tuan/store/view.php?id=1984&amp;type=3" target="_blank">详细</a></p>
+			            <p>
+			            <!-- 商品：<b id="total_price_span_id_1984" class="text-red">0.00</b>元&nbsp;&nbsp;-->
+			          	   商品：<b id="total_sale_price_span_id_1984" class="text-red">0.00</b>元&nbsp;&nbsp;                      
+			       		重量：<span id="shipping_weight_span_id_1984">0.00</span>公斤&nbsp;&nbsp;
+			         	运费：<span id="shipping_price_span_id_1984" class="text-success">0.00</span>元&nbsp;&nbsp;
+			   			总计：<span id="all_price_span_id_1984" class="flash_price total_price">0.00</span>元&nbsp;&nbsp;
+			           	 	<a data-toggle="modal" data-target="#modal" href="/modal/?action=3&amp;them_type=1" class="daren-price"><i class="fa fa-vimeo text-gold"></i><span class=" text-white"> 达人可减<span id="daren_price_off_span_id_1984">0.00</span>元</span></a>&nbsp;&nbsp;
+			                	<input type="submit" name="save_button_id" id="save_button_id_1984" value="进入结算" class="btn btn-danger btn-sm" title="去结算"/>
+			            	</p>
+                    </div>
+
+				</div>
+				
+			</div>
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--foot-->
+		<div id = "foot">
+			<div class = "foot_box">
+				<p><a href="#">关于我们</a>&nbsp;&nbsp; <a href="#">网站守则</a> &nbsp;&nbsp; <a href="#">团购说明</a> &nbsp;&nbsp;  <a href="#">转运服务</a>&nbsp;&nbsp;  <a href="#">联系我们</a> </p>
+				<p>©2018 海淘网 <a href="#">沪ICP备14025008号</a> &nbsp;&nbsp; <a href="#"><img src="/images/foot/1.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/foot/2.png"> 网安备31011502002285</p>
+			</div>
+		</div>
+		
+		
+		<script src="/js/head.js"></script>
+		<script src="/js/cart.js"></script>
+	</body>
+</html>

@@ -1,0 +1,317 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, figure {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee;
+  font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 16px; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a, u {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  display: block; }
+
+ul, ol, li {
+  list-style: none; }
+
+input {
+  outline: none; }
+
+.clear-fix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+/*top*/
+#top {
+  height: 32px;
+  background: #333; }
+  #top a {
+    color: #ccc;
+    padding: 0 10px; }
+  #top .top_box {
+    height: 32px;
+    width: 90%;
+    margin: 0 auto; }
+    #top .top_box .topL {
+      float: left; }
+      #top .top_box .topL .dropdown-menu {
+        width: 200px;
+        position: absolute;
+        top: 32px;
+        z-index: 10;
+        background: #fff;
+        display: none; }
+    #top .top_box .topR {
+      float: right; }
+      #top .top_box .topR .dropdown-menu {
+        width: 120px;
+        position: absolute;
+        top: 32px;
+        z-index: 10;
+        background: #fff;
+        display: none; }
+        #top .top_box .topR .dropdown-menu li {
+          width: 118px; }
+    #top .top_box li {
+      float: left;
+      padding: 6px 0 5px; }
+    #top .top_box .dropdown-menu li {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee; }
+  #top .dropdown-menu a {
+    color: #585b48; }
+  #top .top_line {
+    border-right: 1px solid #222; }
+
+/*logo*/
+#logo_box {
+  width: 100%;
+  background: #fff; }
+  #logo_box .btn1, #logo_box .btn2:hover {
+    cursor: pointer; }
+  #logo_box .logo {
+    height: 100px;
+    width: 90%;
+    background: #fff;
+    margin: 0 auto; }
+    #logo_box .logo .logo_con {
+      float: left;
+      width: 20%;
+      margin: 20px 0 0 5%; }
+    #logo_box .logo .select {
+      float: right;
+      margin: 20px 5% 0 0;
+      width: 65%; }
+      #logo_box .logo .select a {
+        font-size: 12px;
+        padding: 0 5px; }
+      #logo_box .logo .select .btn2 {
+        float: right;
+        margin-right: 10px;
+        padding-top: 8px;
+        height: 24px;
+        width: 86px;
+        color: #fff;
+        background: #de3c5b;
+        border: 0;
+        border-radius: 16px; }
+        #logo_box .logo .select .btn2 #tuan_car_num {
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          background: #fff;
+          color: #de3c5b;
+          border-radius: 10px; }
+      #logo_box .logo .select .select_box {
+        float: right;
+        width: 70%; }
+        #logo_box .logo .select .select_box input {
+          width: 75%;
+          height: 30px;
+          border: 1px solid #d00; }
+        #logo_box .logo .select .select_box .btn1 {
+          height: 32px;
+          background: #de3c5b;
+          border: 0;
+          width: 80px;
+          color: #fff; }
+        #logo_box .logo .select .select_box p {
+          font-size: 14px;
+          color: #888; }
+          #logo_box .logo .select .select_box p a {
+            font-size: 12px;
+            color: #888; }
+
+/*nav*/
+#nav {
+  height: 40px;
+  background: #333; }
+  #nav .nav_con {
+    height: 40px;
+    line-height: 40px;
+    width: 90%;
+    margin: 0 auto; }
+    #nav .nav_con a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      color: #fff; }
+    #nav .nav_con .nav_box {
+      width: 100%; }
+      #nav .nav_con .nav_box li {
+        float: left;
+        position: relative;
+        width: 10%;
+        text-align: center; }
+      #nav .nav_con .nav_box .tuan_index {
+        width: 20%; }
+      #nav .nav_con .nav_box .drop_con .tuan_category_ul {
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        z-index: 10;
+        background: #fff;
+        display: none; }
+        #nav .nav_con .nav_box .drop_con .tuan_category_ul a {
+          font-size: 16px;
+          color: #fff;
+          display: block; }
+      #nav .nav_con .nav_box .drop_con .list-group-item {
+        background: #fa3779;
+        width: 80%;
+        padding: 0 10% 0;
+        text-align: left; }
+
+/*list*/
+.list {
+  width: 90%;
+  margin: 0 auto; }
+  .list .list_head {
+    border: 1px solid #ececec;
+    margin-bottom: 10px;
+    background: #fff; }
+    .list .list_head h2 {
+      font-size: 18px;
+      height: 49px;
+      line-height: 49px;
+      padding-left: 15px;
+      border-bottom: 1px solid #eee; }
+      .list .list_head h2 span {
+        color: gray;
+        font-size: 12px; }
+    .list .list_head .p_box {
+      padding: 10px; }
+      .list .list_head .p_box p {
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-size: 14px; }
+        .list .list_head .p_box p a {
+          padding: 3px 8px;
+          font-size: 14px;
+          color: #666; }
+        .list .list_head .p_box p .active {
+          background: #666;
+          color: #fff;
+          border-radius: 2px; }
+  .list .tuan_list dl {
+    float: left; }
+    .list .tuan_list dl dt {
+      padding-left: 1%;
+      padding-right: 1%;
+      width: 98%;
+      position: relative;
+      overflow: hidden; }
+      .list .tuan_list dl dt a {
+        position: relative;
+        display: block; }
+        .list .tuan_list dl dt a img {
+          height: 100%;
+          width: 100%; }
+      .list .tuan_list dl dt .a_act {
+        height: 150%;
+        width: 150%;
+        position: absolute;
+        left: -25%;
+        top: -25%; }
+      .list .tuan_list dl dt .free_ship_tips {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        background: #e93b78;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        padding: 6px 3px;
+        border-radius: 0 0 5px 5px; }
+    .list .tuan_list dl dd {
+      padding: 10px; }
+      .list .tuan_list dl dd h3 {
+        font-size: 14px;
+        height: 40px;
+        line-height: 20px;
+        overflow: hidden; }
+        .list .tuan_list dl dd h3 a {
+          color: #666;
+          overflow: hidden; }
+          .list .tuan_list dl dd h3 a .text_red {
+            color: red; }
+      .list .tuan_list dl dd h4 {
+        font-size: 12px;
+        color: #999; }
+        .list .tuan_list dl dd h4 a {
+          color: #999; }
+        .list .tuan_list dl dd h4 span {
+          float: right; }
+      .list .tuan_list dl dd h5 {
+        font-size: 14px;
+        margin: 10px 0;
+        font-weight: 500; }
+        .list .tuan_list dl dd h5 .flash_price {
+          color: #ff4c66;
+          font-size: 18px;
+          font-weight: 600; }
+        .list .tuan_list dl dd h5 .daren-price {
+          float: right;
+          background: #666;
+          border-radius: 2px;
+          color: #fff;
+          padding: 5px 6px;
+          font-size: 12px;
+          white-space: nowrap; }
+
+/*foot*/
+#foot {
+  background: #333;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff; }
+  #foot .foot_box {
+    height: 78px;
+    width: 90%;
+    margin: 0 auto; }
+    #foot .foot_box p {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #fff; }
+      #foot .foot_box p img {
+        display: inline-block;
+        height: 20px; }
+      #foot .foot_box p a {
+        color: #fff; }
+
+.text-gold {
+  color: #ff4c66 !important; }
+
+@media all and (min-width: 992px) and (max-width: 1400px) {
+  dl {
+    width: 25%; } }
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  dl {
+    width: 33%; } }
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  dl {
+    width: 49%; } }
+
+@media all and (min-width: 320px) and (max-width: 479px) {
+  dl {
+    width: 85%; } }
