@@ -30,7 +30,7 @@ app.use(logger("dev"));
 
 //处理post数据
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 //cookie-session
 app.use(cookieParser());

@@ -4,7 +4,7 @@ var pool = require("../utils/pool");
 
 var router = express.Router();
 router.get("/", function(req, res) {
-	var sql = "select * from goods where gid = 1";
+	var sql = "select * from goods where gid = 'sp1'";
 	pool.query(sql,function(err,data){
 		console.log(data);
 		if(data.length == 0){//没有数据

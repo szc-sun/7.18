@@ -1,3 +1,15 @@
+if(localStorage.sp){
+	var spObj = JSON.parse(localStorage.sp);
+	if(spObj){
+		var nou = 0;
+		for(var i in spObj){
+			var obj = eval('(' + spObj[i] + ')');
+			console.log(obj.gid);
+			nou += obj.nums;
+		}
+	$(".badge").html(nou);
+	}
+}
 //二级菜单
 var $ullis = $(".drowdown-menu li");
 var $menuli = $(".drop_con");
@@ -122,7 +134,7 @@ function worldClockZone(){
 	
 $(".btn2").click(function(){
 	//location.href="cart.html";
-	$(location).attr('href', 'cart.html');
+	$(location).attr('href', '/users/cart');
 })
 
 //回到顶部

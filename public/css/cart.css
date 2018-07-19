@@ -126,8 +126,9 @@ input {
         border-radius: 16px; }
         #logo_box .logo .select .btn2 #tuan_car_num {
           display: inline-block;
-          height: 16px;
-          width: 16px;
+          
+          padding: 3px 5px;
+         
           background: #fff;
           color: #de3c5b;
           border-radius: 10px; }

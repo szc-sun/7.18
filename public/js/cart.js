@@ -5,17 +5,23 @@ if(localStorage.sp){
 	var spObj = JSON.parse(localStorage.sp);
 	if(spObj){
 		var total = 0;
+		var nou = 0;
 		$(".cart_none").css("display","none");
 		$(".cart_show").css("display","block");
 		for(var i in spObj){
-			console.log(spObj[i]);
-			total += spObj[i].nums * spObj[i].goodPrice;
+			var obj = eval('(' + spObj[i] + ')');
+			console.log(obj.gid);
+			//console.log(typeof spObj[i],spObj[i]);
+			//alert(spObj[i]);
+			//var obj = eval('(' + str + ')');
+			total += obj.nums * obj.goodPrice;
+			nou += obj.nums;
 			var $str =  `
 					
-				<div class="cart-group-item" data-good-id="${spObj[i].gid}">
+				<div class="cart-group-item" data-good-id="${obj.gid}">
 								
 		            <div class="row">
-		            	<div id = "gid" style = "display:none;">${spObj[i].gid}</div>
+		            	<div id = "gid" style = "display:none;">${obj.gid}</div>
 		                <div class="col-xs-1 col">
 		                	<span class="select_lable">
 		                		<input type="checkbox" name="1984" id="check_product_1">
@@ -23,27 +29,27 @@ if(localStorage.sp){
 		                	</span></div>
 		                <div class="col-xs-2 col">
 		                    <a href="#" target="_blank">
-		                        <img src="${spObj[i].goodSrc}" style="display: inline-block;width:60px;height:80px;">
+		                        <img src="${obj.goodSrc}" style="display: inline-block;width:60px;height:80px;">
 		                    </a>
 		                </div>
 		                <div class="col-xs-3  text-left col">
 		                    <p class="title">
-		                    	<a href="#" target="_blank">${spObj[i].gRemark}</a> 
+		                    	<a href="#" target="_blank">${obj.gRemark}</a> 
 		                    </p>
 		                    <p>
 		                        <span class="text-border text-border-red">包邮</span>                                                                									<span class="text-border text-border-gold">限5件</span> 
 		                    </p>
 		                </div>
 		                <div class="col-xs-3 text-muted col">
-		                	<b class="text-red ">${spObj[i].goodPrice}</b>
+		                	<b class="text-red ">${obj.goodPrice}</b>
 		                    <p><span class="daren-price">
 		                    	<i class="fa fa-vimeo text-gold"></i> 省55元</span>
 		                    </p>                            
 		                </div>
 		                <div class="col-xs-2 num-btn text-center col">
-		                    <a href="javascript:void(0);" name="${spObj[i].gname}" id="numdown" class = "numdown"> - </a>
-		                    <input name="nums" id="nums" class = "nums" type="text" value="${spObj[i].nums}">
-		                    <a href="javascript:void(0);" name="${spObj[i].gname}"id="numup" class = "numup"> + </a>
+		                    <a href="javascript:void(0);" name="${obj.gname}" id="numdown" class = "numdown"> - </a>
+		                    <input name="nums" id="nums" class = "nums" type="text" value="${obj.nums}">
+		                    <a href="javascript:void(0);" name="${obj.gname}"id="numup" class = "numup"> + </a>
 		                </div>
 
 		                <div class="col-xs-1 text-right col">
@@ -53,48 +59,61 @@ if(localStorage.sp){
 		                </div>
 		            </div>
 		        </div>
-					
-			`;
+		    `;
 			$($str).appendTo($(".cart_con"));
 
 		}
 		$(".total_price").html(total);
+		$(".badge").html(nou);
 	}
 }else{
 	localStorage.sp = ""; 
 }
 
 
-//件数加减
+//件数减
 var $minus=$(".numdown");
 $minus.each(function(){
 	$(this).click(function(){
 		var $gid = $(this).parents('.cart-group-item').attr('data-good-id');
-		var spObj = JSON.parse(localStorage.sp);
-		
-		if(spObj[$gid].nums > 1){
-			spObj[$gid].nums --;
-			var total = parseInt($(".total_price").html()) - spObj[$gid].goodPrice;
+		console.log($gid);
+		var obj = JSON.parse(localStorage.sp)
+		var spObj = JSON.parse(obj[$gid]);
+		if(spObj.nums > 1){
+			spObj.nums --;
+			var total = parseInt($(".total_price").html()) - spObj.goodPrice;
 			$(".total_price").html(total);			
 		}
 		
-		$(this).next().val(spObj[$gid].nums);
+		$(this).next().val(spObj.nums);
 		//$(this).parent().next().html(cookieObj[goodId].num * cookieObj[goodId].price);
-		localStorage.sp = JSON.stringify(spObj);
+		obj[$gid] = JSON.stringify(spObj);
+
+		localStorage.sp = JSON.stringify(obj);
+		var nou = $(".badge").html();
+		nou--;
+		$(".badge").html(nou);
 	})
 })
+//件数加
 var $plus=$(".numup");
 $plus.each(function(){
 	$(this).click(function(){
 		var $gid = $(this).parents('.cart-group-item').attr('data-good-id');
-		var spObj = JSON.parse(localStorage.sp);
-		spObj[$gid].nums ++;
-		var total = parseInt($(".total_price").html()) + spObj[$gid].goodPrice;
+		var obj = JSON.parse(localStorage.sp)
+		var spObj = JSON.parse(obj[$gid]);
+		spObj.nums ++;
+		var total = parseInt($(".total_price").html()) + spObj.goodPrice;
 		$(".total_price").html(total);
 
-		$(this).prev().val(spObj[$gid].nums);
+		$(this).prev().val(spObj.nums);
 		//$(this).parent().next().html(cookieObj[goodId].num * cookieObj[goodId].price);
-		localStorage.sp = JSON.stringify(spObj);
+		obj[$gid] = JSON.stringify(spObj);
+
+		localStorage.sp = JSON.stringify(obj);
+		var nou = $(".badge").html();
+		nou++;
+		$(".badge").html(nou);
 	})
 })
 
@@ -103,15 +122,22 @@ var $nums = $(".nums");
 $nums.each(function(){
 	$(this).blur(function(){
 		var $gid = $(this).parents('.cart-group-item').attr('data-good-id');
-		var spObj = JSON.parse(localStorage.sp);
-		var total = parseInt($(".total_price").html()) + spObj[$gid].goodPrice*(parseInt($(this).val())-spObj[$gid].nums);
-		spObj[$gid].nums = parseInt($(this).val());
+		var obj = JSON.parse(localStorage.sp)
+		var spObj = JSON.parse(obj[$gid]);
+		var tmpnum = parseInt($(this).val())-spObj.nums;
+		var total = parseInt($(".total_price").html()) + spObj.goodPrice*tmpnum;
+		spObj.nums = parseInt($(this).val());
 		//var total = parseInt($(".total_price").html()) + spObj[$gid].goodPrice;
 		$(".total_price").html(total);
 
-		$(this).prev().val(spObj[$gid].nums);
+		$(this).prev().val(spObj.nums);
 		//$(this).parent().next().html(cookieObj[goodId].num * cookieObj[goodId].price);
-		localStorage.sp = JSON.stringify(spObj);
+		obj[$gid] = JSON.stringify(spObj);
+
+		localStorage.sp = JSON.stringify(obj);
+		var nou = $(".badge").html();
+		nou =parseInt(nou) + tmpnum;
+		$(".badge").html(nou);
 	})
 })
 
@@ -124,19 +150,58 @@ $dels.each(function(){
 		if(war == true){
 			var $gid = $(this).parents('.cart-group-item').attr('data-good-id');
 			console.log($gid)
-			var spObj = JSON.parse(localStorage.sp);
-			delete spObj[$gid];
-			localStorage.sp = JSON.stringify(spObj);
+			var obj = JSON.parse(localStorage.sp);
+			var spObj = JSON.parse(obj[$gid]);
+			var nou = $(".badge").html();
+			nou =parseInt(nou) - spObj.nums;
+			$(".badge").html(nou);
+			var total = parseInt($(".total_price").html()) - spObj.goodPrice * spObj.nums;
+			$(".total_price").html(total);
+			//var spObj = JSON.parse(obj[$gid]);
+			delete obj[$gid];
+			//obj[$gid] = JSON.stringify(spObj);
+			localStorage.sp = JSON.stringify(obj);
 			$(this).parents(".cart-group-item").remove();
+			
 		}
+	})
+})
+
+$(".btn-sm").click(function(){
+	var spObj = JSON.parse(localStorage.sp);
+	console.log(spObj);
+	$.ajax({
+		type:"post",
+		url:"/users/cart/up",
+		data:spObj,
+		dataType:"json",
+		success:function(json){
+			console.log("66666",json);
+			if(json.error == 0){
+				if(json.msg == "未登录"){
+					location.href="/users/login";
+				}
+			}else{
+				if(json.msg == "结算成功"){
+					alert("结算成功");
+				}
+				
+			}
+		}
+
 	})
 })
 
 
 
+var $change = $(".row .select_lable label");
+$change.each(function(){
+	$(this).click(function(){
+		$(this).toggleClass("bg_red");
+	})
+})
 
-$(".select_lable label").click(function(){
-//	console.log($(".select_lable label"));
+$(".cart-heading .select_lable label").click(function(){
 	 $(this).toggleClass("bg_red");
 	 choose();
 })

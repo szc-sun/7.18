@@ -30,7 +30,7 @@ input{outline:none;}
 .logo_con{float:left;width:20%;margin:20px 0 0 5%;}
 .select{float:right;margin:20px 5% 0 0;width:65%;}
 .btn2{float:right;margin-right: 10px;padding-top:8px;height:24px;width:86px;color:#fff;background: #de3c5b;border:0;border-radius:16px;}
-#tuan_car_num{display:inline-block;height:16px;width:16px;background:#fff;color:#de3c5b;border-radius:10px;}
+#tuan_car_num{display:inline-block;padding: 3px 6px;background:#fff;color:#de3c5b;border-radius:10px;}
 .select a{font-size:12px;padding:0 5px;}
 .select .a_boder{border-right:1px solid #d00;}
 .select_box{width:70%;}

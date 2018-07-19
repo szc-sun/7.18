@@ -1,3 +1,16 @@
+if(localStorage.sp){
+	var spObj = JSON.parse(localStorage.sp);
+	if(spObj){
+		var nou = 0;
+		for(var i in spObj){
+			var obj = eval('(' + spObj[i] + ')');
+			console.log(obj.gid);
+			nou += obj.nums;
+		}
+	$(".badge").html(nou);
+	}
+}
+
 //二级菜单
 var $ullis = $(".drowdown-menu li");
 var $menuli = $(".drop_con");
@@ -165,7 +178,7 @@ $(".pic a").hover(function(){
 })
 
 $(".btn2").click(function(){
-	$(location).attr('href', 'cart.html');
+	$(location).attr('href', '/users/cart');
 })
 
 addCart();
@@ -184,36 +197,27 @@ function addCart(){
 			var $goodSrc = $(this).parents(".item").children(".pic").children("a").children("img").attr('src');
 			
 			//var json = JSON.parse(localStorage.json);
-			console.log(localStorage.json)
 			if(!localStorage.sp){
 				spObj = JSON.parse("{}");
 
-				spObj[$gid]= {
-						gid:$gid,
-						gRemark:$gRemark,
-						goodPrice:$goodPrice,
-						goodSrc:$goodSrc,
-						nums:1
-					}
+				spObj[$gid]= `{"gid":"${$gid}","gRemark":"${$gRemark}","goodPrice":${$goodPrice},"goodSrc":"${$goodSrc}","nums":1}`;
 			}else{
 				var spObj = JSON.parse(localStorage.sp);
 				if($gid in spObj){
-					spObj[$gid].nums += 1;
+					var nums = spObj[$gid].split('"nums":');
+					var $nums = parseInt(nums[1]);
+					$nums++;
+					spObj[$gid]= `{"gid":"${$gid}","gRemark":"${$gRemark}","goodPrice":${$goodPrice},"goodSrc":"${$goodSrc}","nums":${$nums}}`
 				}else{
-					spObj[$gid]= {
-						gid:$gid,
-						gRemark:$gRemark,
-						goodPrice:$goodPrice,
-						goodSrc:$goodSrc,
-						nums:1
-					}
+					spObj[$gid]=`{"gid":"${$gid}","gRemark":"${$gRemark}","goodPrice":${$goodPrice},"goodSrc":"${$goodSrc}","nums":1}`;
 				}
 			}
 			
 			localStorage.sp = JSON.stringify(spObj);
-			
+			var nou = parseInt($(".badge").html()) + 1;
+			$(".badge").html(nou);
 
-
+			alert("加入购物车成功!");
 	//获取商品id,名字,价格,优惠价格,件数;
 	//console.log($gid,$gRemark,$goodPrice,$goodSrc);
 	});

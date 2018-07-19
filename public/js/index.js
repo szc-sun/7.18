@@ -266,5 +266,22 @@ $(".select a").hover(function(){
 
 
 $(".btn2").click(function(){
-	$(location).attr('href', 'cart.html');
+	$(location).attr('href', '/users/cart');
 })
+
+
+
+if(localStorage.sp){
+	var spObj = JSON.parse(localStorage.sp);
+	if(spObj){
+		var nou = 0;
+		for(var i in spObj){
+			var obj = eval('(' + spObj[i] + ')');
+			console.log(obj.gid);
+			nou += obj.nums;
+		}
+	$(".badge").html(nou);
+	}
+}
+
+

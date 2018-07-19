@@ -6,7 +6,8 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>购物车</title>
 		<link rel="stylesheet" href="/css/cart.css" />
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/css/font-awesome.min.css"/>
 		<script src = "/js/jquery-1.11.3.js"></script>
 	</head>
@@ -15,7 +16,7 @@
 		<div id = "top">
 			<div class = "top_box clear-fix">
 				<ul class = "topL">
-					<li><a href="index.html">海淘首页</a><span class="top_line"></span></li>
+					<li><a href="/">海淘首页</a><span class="top_line"></span></li>
 					<li><a href="">关于我们</a></li>
 					<li class = "drop_con show_time"><a href=""><span class= "fa fa-clock-o"></span>世界时间</a>
 						<ul class="dropdown-menu clear-fix  nav_dropdown_time">
@@ -57,8 +58,8 @@
 							<li><a href="//www.haitao.com/collect/" class="header_top_line"><span class="fa fa-fw fa-star"></span> 我的收藏</a></li>
 						</ul>
 					</li>
-					<li><a href="register.html">注册</a><span class="top_line"></span></li>
-					<li class = "drop_con"><a href="login.html">登录<span class = "fa fa-sort-desc"></span></a>
+					<li><a href="/users/reg">注册</a><span class="top_line"></span></li>
+					<li class = "drop_con"><a href="/users/login">登录<span class = "fa fa-sort-desc"></span></a>
 						<ul class="dropdown-menu nav_dropdown_menu">
 							<li><a href="//my.haitao.com/login/?url="><span class="fa fa-user  fa-fw"></span> 会员登录</a></li>
 							<li> <a href="//my.haitao.com/login/sso/login.php?t=xss" target="_blank"><span class="fa fa-weixin fa-fw"></span> 微信登录</a></li>
@@ -73,9 +74,9 @@
 		<!--logo-->
 		<div id = "logo_box" class="clear-fix">
 			<div class = "logo clear-fix">
-				<div class = "logo_con"><a href=""><img src="/images/logo.png" alt="" /></a></div>
+				<div class = "logo_con"><a href="/"><img src="/images/logo.png" alt="" /></a></div>
 				<form action="" class= "select clear-fix">
-					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">1</span></div>
+					<div class = "btn2" style="font-size: 12px;text-align:center"><span class="fa fa-cart-plus fa-lg"></span>购物车<span id="tuan_car_num" class="badge">0</span></div>
 					<div class = "select_box">
 						<input type="text" placeholder="搜索全球"/><button class="btn1"><span class="fa fa-search"></span></button>
 						<p>
@@ -96,10 +97,10 @@
 		<div id="nav">
 			<div class="nav_con clear-fix">
 				<ul class = "nav_box clear-fix">
-					<li class = "drop_con tuan_index"><a href="listpage.html">团购首页</a>
+					<li class = "drop_con tuan_index"><a href="/listpage">团购首页</a>
 						<ul class="tuan_category_ul dropdown-menu">
 							<li class="list-group-item">
-								<a href="listpage.html" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
+								<a href="/listpage" target="_blank"><i class="fa fa-fw fa-child"></i>育儿<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
 							</li>
 							<li class="list-group-item">
 								<a href="#" target="_blank"><i class="fa fa-fw fa-leaf"></i>保健<span class="pull-right"><i class=" fa fa-angle-right"></i></span></a>
@@ -188,7 +189,8 @@
 	                            	<span class="select_lable">
 	                            		<input type="checkbox" name="1984" id="check_product_9682">
 	                            		<label for="check_product_9682"></label>
-	                            	</span></div>
+	                            	</span>
+	                            </div>
 	                            <div class="col-xs-2 col">
 	                                <a href="//www.haitao.com/tuan/9682.html" target="_blank">
 	                                    <img src="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" data-original="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" onerror="nofind();" style="display: inline;">
@@ -240,12 +242,12 @@
                     	<p class="well well-sm"><span id="freight_1984">包邮活动！订单满400元，订单重量小于2kg该订单包邮（重量为0的商品不参与此优惠）！超过2kg订单，无法提供包邮，运费按照首重40元/kg，续重20元/0.5kg计算。</span> <a href="//www.haitao.com/tuan/store/view.php?id=1984&amp;type=3" target="_blank">详细</a></p>
 			            <p>
 			            <!-- 商品：<b id="total_price_span_id_1984" class="text-red">0.00</b>元&nbsp;&nbsp;-->
-			          	   商品：<b id="total_sale_price_span_id_1984" class="text-red">0.00</b>元&nbsp;&nbsp;                      
+			          	   商品：<b id="total_sale_price_span_id_1984" class="text-red total_price">0.00</b>元&nbsp;&nbsp;                      
 			       		重量：<span id="shipping_weight_span_id_1984">0.00</span>公斤&nbsp;&nbsp;
 			         	运费：<span id="shipping_price_span_id_1984" class="text-success">0.00</span>元&nbsp;&nbsp;
 			   			总计：<span id="all_price_span_id_1984" class="flash_price total_price">0.00</span>元&nbsp;&nbsp;
 			           	 	<a data-toggle="modal" data-target="#modal" href="/modal/?action=3&amp;them_type=1" class="daren-price"><i class="fa fa-vimeo text-gold"></i><span class=" text-white"> 达人可减<span id="daren_price_off_span_id_1984">0.00</span>元</span></a>&nbsp;&nbsp;
-			                	<input type="submit" name="save_button_id" id="save_button_id_1984" value="进入结算" class="btn btn-danger btn-sm" title="去结算"/>
+			                	<input type="submit" name="save_button_id" id="save_button_id" value="进入结算" class="btn btn-danger btn-sm" title="去结算"/>
 			            	</p>
                     </div>
 
