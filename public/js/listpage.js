@@ -1,15 +1,19 @@
-if(localStorage.sp){
-	var spObj = JSON.parse(localStorage.sp);
-	if(spObj){
-		var nou = 0;
-		for(var i in spObj){
-			var obj = eval('(' + spObj[i] + ')');
-			console.log(obj.gid);
-			nou += obj.nums;
+nou();
+function nou(){
+	if(localStorage.sp){
+		var spObj = JSON.parse(localStorage.sp);
+		if(spObj){
+			var nou = 0;
+			for(var i in spObj){
+				var obj = eval('(' + spObj[i] + ')');
+				console.log(obj.gid);
+				nou += obj.nums;
+			}
+		$(".badge").html(nou);
 		}
-	$(".badge").html(nou);
 	}
 }
+
 
 //二级菜单
 var $ullis = $(".drowdown-menu li");
@@ -214,8 +218,9 @@ function addCart(){
 			}
 			
 			localStorage.sp = JSON.stringify(spObj);
-			var nou = parseInt($(".badge").html()) + 1;
-			$(".badge").html(nou);
+			nou();
+			/*var nou = parseInt($(".badge").html()) + 1;
+			$(".badge").html(nou);*/
 
 			alert("加入购物车成功!");
 	//获取商品id,名字,价格,优惠价格,件数;

@@ -9,8 +9,9 @@ if(localStorage.sp){
 		$(".cart_none").css("display","none");
 		$(".cart_show").css("display","block");
 		for(var i in spObj){
-			var obj = eval('(' + spObj[i] + ')');
-			console.log(obj.gid);
+			var obj = JSON.parse(spObj[i]);
+			//var obj = eval('(' + spObj[i] + ')');
+			//console.log(obj.gid);
 			//console.log(typeof spObj[i],spObj[i]);
 			//alert(spObj[i]);
 			//var obj = eval('(' + str + ')');
@@ -169,20 +170,80 @@ $dels.each(function(){
 
 $(".btn-sm").click(function(){
 	var spObj = JSON.parse(localStorage.sp);
-	console.log(spObj);
+	//console.log(spObj);
 	$.ajax({
 		type:"post",
 		url:"/users/cart/up",
 		data:spObj,
 		dataType:"json",
 		success:function(json){
-			console.log("66666",json);
+			//console.log("66666",json);
 			if(json.error == 0){
 				if(json.msg == "未登录"){
-					location.href="/users/login";
+					var tx = confirm("您还未登录,确定跳转到登录页吗?") 
+					if(tx == true){
+						location.href="/users/login";
+					}					
 				}
 			}else{
-				if(json.msg == "结算成功"){
+				if(json.msg){
+					console.log("23333",json.msg);
+					/*$(".cart-group-item").remove();
+
+				for(var i in json.msg){
+					console.log(i);
+					var $str =  `
+					
+				<div class="cart-group-item" data-good-id="${json["msg"][i].gid}">
+								
+		            <div class="row">
+		            	<div id = "gid" style = "display:none;">${json["msg"][i].gid}</div>
+		                <div class="col-xs-1 col">
+		                	<span class="select_lable">
+		                		<input type="checkbox" name="1984" id="check_product_1">
+		                		<label for="check_product_1"></label>
+		                	</span></div>
+		                <div class="col-xs-2 col">
+		                    <a href="#" target="_blank">
+		                        <img src="${json["msg"][i].img}" style="display: inline-block;width:60px;height:80px;">
+		                    </a>
+		                </div>
+		                <div class="col-xs-3  text-left col">
+		                    <p class="title">
+		                    	<a href="#" target="_blank">${json["msg"][i].remark}</a> 
+		                    </p>
+		                    <p>
+		                        <span class="text-border text-border-red">包邮</span>                                                                									<span class="text-border text-border-gold">限5件</span> 
+		                    </p>
+		                </div>
+		                <div class="col-xs-3 text-muted col">
+		                	<b class="text-red ">${json["msg"][i].price1}</b>
+		                    <p><span class="daren-price">
+		                    	<i class="fa fa-vimeo text-gold"></i> 省55元</span>
+		                    </p>                            
+		                </div>
+		                <div class="col-xs-2 num-btn text-center col">
+		                    <a href="javascript:;"  id="numdown" class = "numdown"> - </a>
+		                    <input name="nums" id="nums" class = "nums" type="text" value="${json["msg"][i].nums}">
+		                    <a href="javascript:;"  id="numup" class = "numup"> + </a>
+		                </div>
+
+		                <div class="col-xs-1 text-right col">
+		                	<a href="javascript:;" name="1984" id="delete" class="delete">
+		                		<span class="fa fa-trash text-gray"></span>
+		                	</a>
+		                </div>
+		            </div>
+		        </div>
+		    `;
+			$($str).appendTo($(".cart_con"));
+		}*/
+
+
+
+
+
+
 					alert("结算成功");
 				}
 				

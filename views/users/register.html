@@ -267,7 +267,6 @@
 		
 		
 		
-		
 		<!--foot-->
 		<div id = "foot">
 			<div class = "foot_box">
@@ -279,7 +278,9 @@
 		<div class="tishi clear-fix" style="width:150px;height:50px;position:fixed;left:0;top:0;bottom:0;right:0;margin:auto;background:#000;color:#fff;display:none;">
 					
 		</div>
-		
+		<%if(error == 0){%>
+			<strong id-status="<%=error %>" class = "reg_tx" style="width:150px;height:50px;position:fixed;left:0;top:0;bottom:0;right:0;margin:auto;background:#000;color:#fff;"><%= msg %></strong>
+		<%}%>
 		<script src="../../js/register.js"></script>
 
 	</body>

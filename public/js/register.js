@@ -258,5 +258,12 @@ function testCode(){
 	var code = arr.join("")
 	return code;
 }
+var status = $(".reg_tx").attr("id-status");
+console.log(status)
+if(status == 0){
+	$(".reg_tx").fadeOut(4000);
+}else{
+	$(".reg_tx").css("display","none");
+}
 
 

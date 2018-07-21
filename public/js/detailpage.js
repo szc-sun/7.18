@@ -1,16 +1,18 @@
-if(localStorage.sp){
-	var spObj = JSON.parse(localStorage.sp);
-	if(spObj){
-		var nou = 0;
-		for(var i in spObj){
-			var obj = eval('(' + spObj[i] + ')');
-			console.log(obj.gid);
-			nou += obj.nums;
+nou();
+function nou(){
+	if(localStorage.sp){
+		var spObj = JSON.parse(localStorage.sp);
+		if(spObj){
+			var nou = 0;
+			for(var i in spObj){
+				var obj = eval('(' + spObj[i] + ')');
+				console.log(obj.gid);
+				nou += obj.nums;
+			}
+		$(".badge").html(nou);
 		}
-	$(".badge").html(nou);
 	}
 }
-
 //选中商品
 $.each($(".product_group_more a"),function(){
 	$(this).click(function(){
@@ -82,9 +84,9 @@ function addCart(){
 			var $goodSrc = $(this).parents(".goods_right_box").children(".product_group_more").children(".on").children("img").attr('src');
 			var $nums = parseInt($(this).parent().siblings(".count").children(".num").text());
 			console.log($gid,$gRemark,$goodPrice,$goodSrc);
-			var nou = parseInt($(".badge").html());
+			/*var nou = parseInt($(".badge").html());
 			nou += $nums;
-			$(".badge").html(nou);
+			$(".badge").html(nou);*/
 
 			if(!localStorage.sp){
 				spObj = JSON.parse("{}");
@@ -103,6 +105,21 @@ function addCart(){
 			}
 			
 			localStorage.sp = JSON.stringify(spObj);
+			nou();
+			function nou(){
+				if(localStorage.sp){
+					var spObj = JSON.parse(localStorage.sp);
+					if(spObj){
+						var nou = 0;
+						for(var i in spObj){
+							var obj = eval('(' + spObj[i] + ')');
+							console.log(obj.gid);
+							nou += obj.nums;
+						}
+					$(".badge").html(nou);
+					}
+				}
+			}
 			
 			alert("加入购物车成功!");
 

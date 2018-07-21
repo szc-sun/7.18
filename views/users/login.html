@@ -203,9 +203,7 @@
 	
 		<!--登录界面-->	
 		<div id="login_box">
-			<%if(error == 0){%>
-				<strong><%= msg %></strong>
-			<%}%>
+			
 			<div class="login clear-fix">
 				<p class="login_head">
 					<a href="/">
@@ -213,9 +211,9 @@
 					</a>
 				</p>
 				<form action="/users/login" method="post" class="form-group">
-					<div class = "input-group"><label for="" class = "input-group-con">账号</label><input type="text" class="form-control" name="uname" id="uname" placeholder="会员名"></div>
+					<div class = "input-group"><label for="" class = "input-group-con">账号</label><input type="text" class="form-control" name="uname" id="uname" placeholder="会员名" value = "qd1802"></div>
 					
-					<div class = "input-group"><label for="" class = "input-group-con">密码</label><input class="form-control" type="password" id="upwd" name="upwd" placeholder="密 码"></div>
+					<div class = "input-group"><label for="" class = "input-group-con">密码</label><input class="form-control" type="password" id="upwd" name="upwd" placeholder="密 码" value="123456"></div>
 					<div class = "input-group btn_input"><input class="form-control yanzheng" name="yzm" type="text" id="yzm" placeholder="验证码"><a href="javascript:void(0);" class="change_code">刷新验证码</a></div>
 					<div class="rber_me">
 						<span class="select_lable"><input type="checkbox" name="auto" id="auto" ><label for="auto" id="select_zz"></label> </span> &ensp;记住我
@@ -285,6 +283,9 @@
 		<div class="tishi clear-fix" style="width:150px;height:50px;position:fixed;left:0;top:0;bottom:0;right:0;margin:auto;background:#000;color:#fff;display:none;">
 					
 		</div>
+		<%if(error == 0){%>
+			<strong class = "login_tx" style="width:150px;height:50px;position:fixed;left:0;top:0;bottom:0;right:0;margin:auto;background:#000;color:#fff;"><%= msg %></strong>
+		<%}%>
 
 
 		<script src="/js/login.js"></script>

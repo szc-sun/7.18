@@ -237,4 +237,5 @@ function testCode(){
 	var code = arr.join("")
 	return code;
 }
+$(".login_tx").fadeOut(4000);
 

@@ -6,10 +6,11 @@ var router = express.Router();
 
 
 //渲染购物车页面
-router.get("/cart", function(req, res) {
+router.get("/cart", function(req,res) {
 	
 	res.render("./users/cart",{error:1,msg:""});
 }); 
+//结算到数据库
 router.post("/cart/up",function(req,res){
 	if(!req.session.isLogin){
 		res.send({error:0,msg:"未登录"});
@@ -25,29 +26,29 @@ router.post("/cart/up",function(req,res){
 
 		arr.forEach(function(value){
 			var obj = JSON.parse((req.body)[value]);
-			console.log(typeof obj);
-			console.log(obj.gid,obj.goodSrc,obj.gRemark,obj.goodPrice,obj.nums);
+			//console.log(typeof obj);
+			//console.log(obj.gid,obj.goodSrc,obj.gRemark,obj.goodPrice,obj.nums);
 			var querySql = `select * from cart where gid = '${value}'`;
-			console.log("11111111")
+			//console.log("11111111")
 			pool.query(querySql,function(err,data){
-				console.log(1,data);
-				console.log("2222222222")
+				//console.log(1,data);
+				//console.log("2222222222")
 				if(data.length == 0){
 					var inserSql = `insert into cart(gid,img,remark,price1,nums) values("${obj.gid}","${obj.goodSrc}","${obj.gRemark}",${obj.goodPrice},${obj.nums})`;
 					//`insert into user_table(uname,upwd) values("${uname}","${upwd}")`
 					pool.query(inserSql,function(err,data){
-						console.log(2,data);
-						console.log("333333333")
+						//console.log(2,data);
+						//console.log("333333333")
 						//res.send({error:1,msg:"结算成功"});
 					});
 				//	`insert into user_table(uname,upwd) values("${uname}","${upwd}")`
 				} else {
 					var nums =parseInt(obj.nums) + parseInt(data[0].nums);
-					console.log(nums);
+					//console.log(nums);
 					var updateSql = `update cart set nums = ${nums} where gid = '${value}'`;
-					console.log(updateSql)
+					//console.log(updateSql)
 					pool.query(updateSql,function(err,data){
-						console.log(3,data);
+						//console.log(3,data);
 						//res.send({error:1,msg:"结算成功"});
 					})
 
@@ -56,8 +57,12 @@ router.post("/cart/up",function(req,res){
 				}	
 			})
 		})
-
-		res.send({error:1,msg:"结算成功"});
+		var dataSql = `select * from cart`;
+		pool.query(dataSql,function(err,data){
+			console.log("qqqq",data);
+			res.send({error:1,msg:data});
+		})
+		
 	
 	}
 	
@@ -94,27 +99,34 @@ router.post("/login", function(req, res) {
 
 //注册页渲染
 router.get("/reg", function(req, res) {
-  	res.render("./users/register");
+  	res.render("./users/register",{error:1,msg:""});
 });
 //处理接口
 router.post("/reg", function(req, res) {
 	var {uname,upwd} = req.body;
 	  
 	//pass = md5(pass);
-	
+	console.log(uname.length);
+	if(uname.length >= 6){
+
 	var querySql = `select * from user_table where uname="${uname}"`;
 	pool.query(querySql,function(err,data){
 		
 		if(data.length == 0){//用户不存在 可以注册
 			var inserSql = `insert into user_table(uname,upwd) values("${uname}","${upwd}")`
 			pool.query(inserSql,function(err){
-				res.send({error:1,msg:"注册成功"});	
+				//res.send({error:1,msg:"注册成功"});	
+				res.redirect("/users/login");
 			});
 			 
 		} else {//用户已经存在
-			res.send({error:0,msg:"用户已存在"});
+			res.render("./users/register",{error:0,msg:"用户已存在"});
 		}	
-	}); 
+	});
+
+	} else{
+		res.render("./users/register",{error:0,msg:"输入内容错误"});
+	}
 });
 
 module.exports = router;

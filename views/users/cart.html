@@ -183,46 +183,47 @@
 			        <!--购物车内容-->
 			        <div class="cart_con clear-fix">
 			        	
-			        	<!--<div class="cart-group-item" id="">
-	                        <div class="row">
-	                            <div class="col-xs-1 col">
-	                            	<span class="select_lable">
-	                            		<input type="checkbox" name="1984" id="check_product_9682">
-	                            		<label for="check_product_9682"></label>
-	                            	</span>
-	                            </div>
-	                            <div class="col-xs-2 col">
-	                                <a href="//www.haitao.com/tuan/9682.html" target="_blank">
-	                                    <img src="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" data-original="http://img5.haitao.com/sku/img/0/9/9682/9682_0.jpg!80" onerror="nofind();" style="display: inline;">
-	                                </a>
-	                            </div>
-	                            <div class="col-xs-3  text-left col">
-	                                <p class="title">
-	                                	<a href="//www.haitao.com/tuan/9682.html" target="_blank">羊奶粉3段 6罐整箱 包邮包税 澳洲直邮 karicare可瑞康婴儿羊奶粉3段 900g*6罐  适合1岁以上婴儿</a> 
-	                                </p>
-	                                <p>
-	                                    <span class="text-border text-border-red">包邮</span>                                                                									<span class="text-border text-border-gold">限5件</span> 
-	                                </p>
-	                            </div>
-	                            <div class="col-xs-3 text-muted col">
-	                            	<b class="text-red ">1577元</b>
-	                                <p><span class="daren-price">
-	                                	<i class="fa fa-vimeo text-gold"></i> 省55元</span>
-	                                </p>                            
-	                            </div>
-	                            <div class="col-xs-2 num-btn text-center col">
-	                                <a href="javascript:void(0);" name="1984" id="decrement_9682"> - </a>
-	                                <input name="1984" id="num_9682" type="text" value="1">
-	                                <a href="javascript:void(0);" name="1984" id="increment_9682"> + </a>
-	                            </div>
-	
-	                            <div class="col-xs-1 text-right col">
-	                            	<a href="javascript:void(0);" name="1984" onclick = "Del()" id="del_9682">
-	                            		<span class="fa fa-trash text-gray"></span>
-	                            	</a>
-	                            </div>
-	                        </div>
-	                    </div>-->
+			        	<!--<div class="cart-group-item" data-good-id="${obj.gid}">
+								
+		            <div class="row">
+		            	<div id = "gid" style = "display:none;">${obj.gid}</div>
+		                <div class="col-xs-1 col">
+		                	<span class="select_lable">
+		                		<input type="checkbox" name="1984" id="check_product_1">
+		                		<label for="check_product_1"></label>
+		                	</span></div>
+		                <div class="col-xs-2 col">
+		                    <a href="#" target="_blank">
+		                        <img src="${obj.goodSrc}" style="display: inline-block;width:60px;height:80px;">
+		                    </a>
+		                </div>
+		                <div class="col-xs-3  text-left col">
+		                    <p class="title">
+		                    	<a href="#" target="_blank">${obj.gRemark}</a> 
+		                    </p>
+		                    <p>
+		                        <span class="text-border text-border-red">包邮</span>                                                                									<span class="text-border text-border-gold">限5件</span> 
+		                    </p>
+		                </div>
+		                <div class="col-xs-3 text-muted col">
+		                	<b class="text-red ">${obj.goodPrice}</b>
+		                    <p><span class="daren-price">
+		                    	<i class="fa fa-vimeo text-gold"></i> 省55元</span>
+		                    </p>                            
+		                </div>
+		                <div class="col-xs-2 num-btn text-center col">
+		                    <a href="javascript:void(0);" name="${obj.gname}" id="numdown" class = "numdown"> - </a>
+		                    <input name="nums" id="nums" class = "nums" type="text" value="${obj.nums}">
+		                    <a href="javascript:void(0);" name="${obj.gname}"id="numup" class = "numup"> + </a>
+		                </div>
+
+		                <div class="col-xs-1 text-right col">
+		                	<a href="javascript:void(0);" name="1984" id="delete" class="delete">
+		                		<span class="fa fa-trash text-gray"></span>
+		                	</a>
+		                </div>
+		            </div>
+		        </div>-->
 			        	
 
 			        </div>
